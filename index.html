@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is the home page for my repository">
+    <meta name="author" content="Steve B KALALA">
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/navigation.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/home.svg" alt="site logo" width="1" height="1">
+        <span>Steve KALALA</span>
+        <button id="nav-button" class="hamburger" aria-label="navigation"></button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="#">Chamber Project</a></li>
+            <li><a href="#">Final Project</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Home</h1>
+        <nav class="a2-section">
+            <section class="lipa">
+                <h2>About Me</h2>
+                <p>
+                    Hello! My name is Steve KALALA and I am from Kinshasa DRC, central of Africa.
+                    Currently living in Ottawa, Canada. I am a returning student at BYUPathway.
+                    Previously graduated in BYU-Idaho major BS in professional Studies.
+                    Now, I am changing my career path to "Bachelor of Applied Science Software Development"
+                    I am passionate in Web, Programming, and Software development. In D&C98:12 it says, 'God gives
+                    unto faithful line upon line, precept upon precept'. I know that this valuable skills that
+                    I am learning will help me to be a good provider for my family, community, and will help with Church
+                    callings.
+                    And the overall will make to be a true disciple leader of the Lord.
+                </p>
+            </section>
+            <section class="lipa">
+                <h2>Student Photo</h2>
+                <img src="images/profile.webp" alt="Profile picture">
+            </section>
+        </nav>
+        <section class="webs">
+            <h2>Web and Computer Programming Courses</h2>
+
+            <div class="buttons">
+                <button id="all">ALL</button>
+                <button id="cse">CSE</button>
+                <button id="wdd">WDD</button>
+            </div>
+
+            <div class="Card">
+            </div>
+
+            <span class="DisplayMessage"></span>
+            <div class="credit-summary">
+                Total Credits: <span id="creditTotal">0</span>
+            </div>
+        </section>
+        <nav class="social">
+            <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.svg" alt="facebook" width="16"
+                    height="16"></a>
+            <a href="https://www.twitter.com/" target="_blank"><img src="images/twitter-x.svg" alt="twiter" width="16"
+                    height="16"></a>
+            <a href="https://www.linkedin.com/" target="_blank"><img src="images/linkedin.svg" alt="linkedin" width="16"
+                    height="16"></a>
+            <a href="https://github.com/Instant-SkyTechnology/wdd131/index.html" target="_blank"><img src="images/github.svg" alt="github" width="16"
+                    height="16"></a>
+            <a href="https://www.microsoft.com/en-ca/microsoft-teams/log-in?msockid=37503da8c2d962d133de2ba5c3f663f1" target="_blank"><img src="images/microsoft-teams.svg" alt="microsoft-teams" width="16" height="16"></a>
+        </nav>
+    </main>
+    <footer>
+        <p id="pb">&copy; <span id="year"></span> | Steve B. KALALA | Canada</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+        
+</body>
+</html>

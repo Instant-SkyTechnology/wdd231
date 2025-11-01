@@ -1,0 +1,331 @@
+/*============COLOR SCHEME===================
+terra cotta #E07A5F,
+Slate blue #3D405B,
+*/
+
+/****************SITE WIDE******************/
+:root {
+    --heading-font: "Roboto", sans-serif;
+    --body-font: "Roboto", sans-serif;
+}
+
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/***************HEADER*********************/
+header {
+    display: grid;
+    grid-template-columns: 24px auto 44px;
+    align-items: end;
+    padding: 20px 0 5px 10px;
+    border-bottom: 1.5px solid #bbb;
+    border-top: 10px solid #E07A5F;
+    column-gap: 8px;
+    background-color: #ddd;
+}
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding-bottom: 4px;
+}
+
+header span {
+    font-size: 1.5rem;
+    color: #3D405B;
+}
+
+/**************HUMBERGURG*****************/
+.hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #3D405B;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.hamburger::before {
+    content: "\2630";
+    font-size: 1.5rem;
+}
+
+.hamburger.show::before {
+    content: "\00D7";
+    font-size: 1.5rem;
+}
+
+/*************NAVIGATION******************/
+
+.navigation {
+    display: none;
+}
+
+.navigation.show {
+    display: block;
+}
+
+.navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #555;
+}
+
+.navigation a {
+    display: block;
+    text-decoration: none;
+    border-bottom: 1px solid #ddd;
+    color: #eee;
+    padding: .8rem 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 100;
+}
+
+.navigation li.current {
+    background-color: #eee;
+}
+
+.navigation a:hover {
+    background-color: #E07A5F;
+}
+
+h1 {
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+/*********/
+nav .navigation{
+    background-color: #666;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    border-bottom: solid 1px #333;
+}
+
+nav ul li a {
+    display: block;
+    background-color: #444;
+    color: #eee;
+    padding: .5rem 0;
+    text-decoration: none;
+    font-size: .9rem;
+}
+
+nav ul li.active a {
+    background-color: #000;
+    color: #fff;
+}
+/*****************MAIN********************/
+h1,
+h2,
+h3, 
+header span {
+    font-weight: 700;
+    font-family: var(--heading-font);
+}
+/*********SECTION 1 AND SECTION 2********/
+.a2-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin: 0 auto;
+    min-height: auto;
+    margin-bottom: 30px;
+    background-color: #f8f9fa;
+}
+
+.a2-section h2 {
+    color: #eee;
+    background-color: #555;
+    font-size: 1em;
+    padding: 5px;
+    text-align: center;
+    margin-top: 0;
+}
+
+.a2-section p {
+    font-size: 0.95em;
+    line-height: 1.5;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.a2-section img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px auto;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    display: block;
+}
+
+.lipa {
+    border: 1px solid #666;
+    background-color: #f8f9fa;
+    height: auto;
+}
+
+/*******SECTION 3 CARD FOR COURSES*******/
+
+.Card {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: .5rem;
+}
+    
+/* Individual card styling */
+.Card section {
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 50px; /* 👈 makes cards short like buttons */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color:#ffffff;
+}
+
+.webs h2 {
+    color: #eee;
+    background-color: #555;
+    font-size: 1em;
+    padding: 7px;
+    text-align: center;
+    margin-top: auto;
+}
+
+.DisplayMessage {
+    display: block;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    
+}
+
+.credit-summary {
+    text-align: center;
+    background-color: #E07A5F;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    width: fit-content;
+    margin: 0 auto 1.5rem auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.Card,
+.buttons button,
+.DisplayMessage,
+.credit-summary {
+    font-family:'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+.lipa p {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/**************BUTTON STYLE*****************/
+/* Button container styling */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Button base style */
+.buttons button {
+    background-color: #3D405B;
+    color: #F4F1DE;
+    border: none;
+    border-radius: 6px;
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Hover effect */
+.buttons button:hover {
+    background-color: #E07A5F;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Focus outline for accessibility */
+.buttons button:focus {
+    outline: 2px solid #F2CC8F;
+    outline-offset: 3px;
+}
+
+/***********FOOTER*****************/
+footer {
+    background-color: #ddd;
+    border-bottom: 10px solid #E07A5F;
+    border-top: 5px solid #3D405B;
+    padding: 3px 5px;
+    text-align: center;
+    color: #3D405B;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 400;
+}
+
+#pb {
+    font-weight: bold;
+}
+
+#lastModified {
+    color: #E07A5F;
+    font-weight: bold;
+}
+/************SOCIAL MEDIA***********/
+.social {
+    display: flex;
+    column-gap: 8px;
+    justify-content: center;
+    margin-top: 25PX;
+    margin-bottom: 25PX;
+}
+
+.social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid #ccc;
+    border-radius: 22px;
+}
+
+.social img {
+    width: 22px;
+    height: 22px;
+}
+
+.social a:hover {
+    background-color: #ddd;
+}
+
