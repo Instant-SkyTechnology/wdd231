@@ -120,12 +120,10 @@ function createCourseCard(filteredcourses) {
         const name = document.createElement("h3");
         const code = document.createElement("p");
         const credits = document.createElement("p");
-        // const title = document.createElement("p");
+        
 
         name.textContent = `${course.completed ? "✓ " : ""}${course.subject} ${course.number}`;
-        // title.textContent = course.title;
-        // code.textContent = `${course.credits} credits`;
-        // Set background color based on completion
+
         if (course.completed) {
             card.style.backgroundColor = "#E07A5F"; // Completed
         } else {
@@ -152,9 +150,4 @@ function createCourseCard(filteredcourses) {
 document.getElementById("year").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent = document.lastModified;
 
-// // Display the current year
-// document.getElementById("year").textContent = new Date().getFullYear();
 
-// // Display the last modified date of the document
-// const lastModified = new Date(document.lastModified);
-// document.getElementById("lastModified").textContent = lastModified.toLocaleString();
