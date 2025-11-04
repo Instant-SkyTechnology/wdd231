@@ -150,4 +150,11 @@ function createCourseCard(filteredcourses) {
 document.getElementById("year").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent = document.lastModified;
 
+// Get all Open Graph meta tags and log their content
+document.querySelectorAll('meta[property^="og:"]').forEach(meta => {
+    console.log(`${meta.getAttribute('property')} = ${meta.getAttribute('content')}`);
+});
+
+
+
 
