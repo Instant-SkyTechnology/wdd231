@@ -1,0 +1,111 @@
+[
+    {
+        "name": "Sunrise Bakery",
+        "address": "123 Main St, [City Name]",
+        "phone": "(555) 111-2222",
+        "website": "https://sunrisebakery.com",
+        "image": "calgary-albert.jpg",
+        "membership": 3,
+        "description": "Family-owned bakery serving fresh pastries since 1998."
+    },
+    {
+        "name": "BlueWave Fitness",
+        "address": "456 Oak Ave, [City Name]",
+        "phone": "(555) 333-4444",
+        "website": "https://bluewavefitness.com",
+        "image": "calgary-albert.jpg",
+        "membership": 2,
+        "description": "State-of-the-art fitness center with personal trainers."
+    },
+    {
+        "name": "Sunrise Bakery",
+        "address": "123 Main St, [City Name]",
+        "phone": "(555) 111-2222",
+        "website": "https://sunrisebakery.com",
+        "image": "sunrise-bakery.png",
+        "membership": 3,
+        "description": "Family-owned bakery serving fresh pastries since 1998."
+    },
+    {
+        "name": "Sunrise Bakery",
+        "address": "123 Main St, [City Name]",
+        "phone": "(555) 111-2222",
+        "website": "https://sunrisebakery.com",
+        "image": "sunrise-bakery.png",
+        "membership": 3,
+        "description": "Family-owned bakery serving fresh pastries since 1998."
+    },
+    {
+        "name": "Sunrise Bakery",
+        "address": "123 Main St, [City Name]",
+        "phone": "(555) 111-2222",
+        "website": "https://sunrisebakery.com",
+        "image": "sunrise-bakery.png",
+        "membership": 3,
+        "description": "Family-owned bakery serving fresh pastries since 1998."
+    },
+    {
+        "name": "Sunrise Bakery",
+        "address": "123 Main St, [City Name]",
+        "phone": "(555) 111-2222",
+        "website": "https://sunrisebakery.com",
+        "image": "sunrise-bakery.png",
+        "membership": 3,
+        "description": "Family-owned bakery serving fresh pastries since 1998."
+    },
+    {
+        "name": "Sunrise Bakery",
+        "address": "123 Main St, [City Name]",
+        "phone": "(555) 111-2222",
+        "website": "https://sunrisebakery.com",
+        "image": "sunrise-bakery.png",
+        "membership": 3,
+        "description": "Family-owned bakery serving fresh pastries since 1998."
+    },
+    {
+        "name": "Sunrise Bakery",
+        "address": "123 Main St, [City Name]",
+        "phone": "(555) 111-2222",
+        "website": "https://sunrisebakery.com",
+        "image": "sunrise-bakery.png",
+        "membership": 3,
+        "description": "Family-owned bakery serving fresh pastries since 1998."
+    },
+    {
+        "name": "Sunrise Bakery",
+        "address": "123 Main St, [City Name]",
+        "phone": "(555) 111-2222",
+        "website": "https://sunrisebakery.com",
+        "image": "sunrise-bakery.png",
+        "membership": 3,
+        "description": "Family-owned bakery serving fresh pastries since 1998."
+    },
+    {
+        "name": "Sunrise Bakery",
+        "address": "123 Main St, [City Name]",
+        "phone": "(555) 111-2222",
+        "website": "https://sunrisebakery.com",
+        "image": "sunrise-bakery.png",
+        "membership": 3,
+        "description": "Family-owned bakery serving fresh pastries since 1998."
+    },
+    {
+        "name": "Sunrise Bakery",
+        "address": "123 Main St, [City Name]",
+        "phone": "(555) 111-2222",
+        "website": "https://sunrisebakery.com",
+        "image": "sunrise-bakery.png",
+        "membership": 3,
+        "description": "Family-owned bakery serving fresh pastries since 1998."
+    },
+    {
+        "name": "Sunrise Bakery",
+        "address": "123 Main St, [City Name]",
+        "phone": "(555) 111-2222",
+        "website": "https://sunrisebakery.com",
+        "image": "sunrise-bakery.png",
+        "membership": 3,
+        "description": "Family-owned bakery serving fresh pastries since 1998."
+    }
+    
+]
