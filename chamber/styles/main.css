@@ -163,13 +163,15 @@ body {
         height: 30px;
         width: 30px;
     }
-
+    header span {
+        font-size: 1.5rem;
+    }
 
     h1,
     h2,
     h3,
     header span {
-        font-weight: 700;
+        font-weight: 600;
         font-family: var(--heading-font);
     }
 
