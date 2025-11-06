@@ -25,6 +25,11 @@
         margin: 0;
         color: var(--text-color);
     }
+    
+   
+    h1 {
+        margin: 20px 0 5px 20px;
+    }
 
     /* Directory Layout */
     .view-toggle {
@@ -70,7 +75,7 @@
                 }
 
     /* Header & Nav */
-    header {
+    /* header {
         display: grid;
         grid-template-columns: 26px auto 44px 5px;
         align-items: end;
@@ -79,7 +84,26 @@
         border-top: 10px solid #E07A5F;
         column-gap: 10px;
         background-color: var(--secondary-color);;
-    }
+    } */
+
+        header {
+            display: grid;
+            grid-template-columns: 40px 1fr auto;
+            align-items: center;
+            /* padding: 20px 0 10px 10px; */
+            padding: 10px 20px;
+            border-bottom: 3px solid #bbb;
+            border-top: 10px solid #E07A5F;
+            column-gap: 20px;
+            background-color: var(--secondary-color);
+        }
+                header span {
+                    flex: 1;
+                    min-width: 150px;
+                    word-wrap: break-word;
+                    text-align: start;
+                    font-size: 1.5rem;
+                }
 
     .navigation {
         margin-bottom: -15px;
@@ -95,10 +119,12 @@
         width: 30px;
     }
 
+    h1,
+    h2,
+    h3,
     header span {
-        font-size: 1.5rem;
-        font-family: var(--body-font);
-        color: var(--text-color);     
+        font-weight: 700;
+        font-family: var(--heading-font);
     }
 
     nav ul {
@@ -110,6 +136,7 @@
 
     nav a:hover {
         background-color: #E07A5F;
+        color: var(--secondary-color);
     }
 
     nav a {
@@ -118,8 +145,12 @@
     }
 
     nav ul li.active a {
-        color: black;
+        color: var(--primary-color);
         font-weight: bold;
+    }
+
+    nav ul li.active a:hover {
+        color: var(--secondary-color);
     }
 
     .navigation ul {
