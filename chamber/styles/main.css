@@ -164,8 +164,11 @@ body {
         width: 30px;
     }
     
-    h1 {
+    /* h1 {
         font-size: 1.5rem;
+    } */
+    header span, h1{
+        font-size: 1.3rem;
     }
 
     h1,
