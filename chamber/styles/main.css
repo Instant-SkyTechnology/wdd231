@@ -183,6 +183,47 @@ body {
         font-family: var(--heading-font);
     }
 
+    /****************BUTTON********************/
+        .view-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1rem;
+        }
+    
+        .view-toggle button {
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            border: 2px solid var(--text-color);
+            border-radius: 6px;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+    
+        .view-toggle button:hover {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+        }
+    
+        /* Highlight active view */
+        .view-toggle button.active {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            font-weight: bold;
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+        }
+    
+        /* Optional: give the icons a consistent width */
+        .view-toggle button {
+            width: 120px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
     /**************HUMBERGURG*****************/
     .hamburger {
         background: none;

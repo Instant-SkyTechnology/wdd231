@@ -32,6 +32,8 @@
     }
 
     /* Directory Layout */
+
+    /*********GRID AND LIST VIEW*****************/
     .view-toggle {
         display: flex;
         justify-content: center;
@@ -48,31 +50,79 @@
         padding: 1rem;
     }
 
+    /* List view layout (wide rows) */
     #memberContainer.list-view {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        /* Remove gap, since we'll use margins/borders instead */
     }
 
+    /* Each member card */
     .member-card {
         background: #f6f5f5;
         border-radius: 8px;
         box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.238);
         text-align: center;
         margin-bottom: 10px;
+        transition: all 0.3s ease;
     }
 
+    /* Default grid card image */
     .member-card img {
         width: 250px;
         height: 250px;
         object-fit: contain;
     }
 
-        .member-card h3 {
-            margin-top: -15px;
-        }
-                .member-card p a {
-                    padding: 0;
-                    margin: 0;
-                }
+    /**************GRID AND LIST VIEW STYLES***********/
+    #memberContainer.list-view .member-card {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        padding: 1rem;
+        border-radius: 0;
+        box-shadow: none;
+        margin: 0;
+        border-bottom: 1px solid #ddd;
+    }
+
+    /* Zebra striping effect */
+    #memberContainer.list-view .member-card:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    #memberContainer.list-view .member-card:nth-child(odd) {
+        background-color: #ffffff;
+    }
+
+    /* Smaller image and left-aligned */
+    #memberContainer.list-view .member-card img {
+        width: 100px;
+        height: 100px;
+        margin-right: 1rem;
+        border-radius: 6px;
+        object-fit: cover;
+    }
+
+    #memberContainer.list-view .member-card h3{
+        margin: 0 20px 0 0;
+        font-size: 1rem;
+    }
+    #memberContainer.list-view .member-card a {
+        text-decoration: none;
+    }
+    #memberContainer.list-view .member-card p {
+        margin: 0.3rem 1rem;
+    }
+
+    .member-card h3 {
+        margin-top: -15px;
+    }
+    .member-card p a {
+        padding: 0;
+        margin: 0;
+    }
 
     /* Header & Nav */
     /* header {
@@ -91,29 +141,29 @@
             grid-template-columns: 40px 1fr auto;
             align-items: center;
             /* padding: 20px 0 10px 10px; */
-            padding: 10px 20px;
+            padding: 30px 20px 10px;
             border-bottom: 3px solid #bbb;
             border-top: 10px solid #E07A5F;
             background-color: var(--secondary-color);
         }
-                         header span ,h1 {
-                    flex: 1;
-                    min-width: 150px;
-                    word-wrap: break-word;
-                    text-align: start;
-                    font-size: 1.5rem;
-                }
-                h2,
-                h3,
-                p {
-                    font-size: 1rem;
-                }
-                .member-card h2,
-                h3,
-                p {
-                    font-size: .9rem;
-                    font-weight: 300;
-                }
+        header span ,h1 {
+            flex: 1;
+            min-width: 150px;
+            word-wrap: break-word;
+            text-align: start;
+            font-size: 1.5rem;
+        }
+        h2,
+        h3,
+        p {
+            font-size: 1rem;
+        }
+        .member-card h2,
+        h3,
+        p {
+            font-size: .9rem;
+            font-weight: 300;
+        }
 
     .navigation {
         margin-bottom: -15px;
@@ -185,6 +235,47 @@
     #nav-button {
         display: none;
     }
+       
+    /****************BUTTON********************/
+        .view-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1rem;
+        }
+    
+        .view-toggle button {
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            border: 2px solid var(--text-color);
+            border-radius: 6px;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+    
+        .view-toggle button:hover {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+        }
+    
+        /* Highlight active view */
+        .view-toggle button.active {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            font-weight: bold;
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+        }
+    
+        /* Optional: give the icons a consistent width */
+        .view-toggle button {
+            width: 120px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
     /**************FOOTER***************/
     footer {
