@@ -77,7 +77,8 @@
 
     /**************GRID AND LIST VIEW STYLES***********/
     #memberContainer.list-view .member-card {
-        display: flex;
+        display: grid;
+        grid-template-columns: 120px 170px 200px 150px 250px auto;
         align-items: center;
         text-align: left;
         padding: 1rem;
@@ -111,9 +112,11 @@
     }
     #memberContainer.list-view .member-card a {
         text-decoration: none;
+        text-align: left;
     }
     #memberContainer.list-view .member-card p {
         margin: 0.3rem 1rem;
+        text-align: left;
     }
 
     .member-card h3 {
