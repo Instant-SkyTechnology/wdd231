@@ -81,13 +81,15 @@
         /* grid-template-columns:200px 220px 135px 270px auto; */
         grid-template-columns: minmax(150px, 200px) minmax(180px, 220px) minmax(100px, 135px) minmax(200px, 250px) auto;
         max-width: 1200px;
+        width: 100%;
         align-items: center;
         text-align: left;
         padding: 1rem;
         border-radius: 0;
         box-shadow: none;
-        margin: 0;
+        margin: 0 auto;
         border-bottom: 1px solid #ddd;
+        overflow: hidden;
     }
 
     /* Zebra striping effect */
