@@ -79,7 +79,7 @@
     #memberContainer.list-view .member-card {
         display: grid;
         /* grid-template-columns:200px 220px 135px 270px auto; */
-        grid-template-columns: minmax(150px, 200px) minmax(180px, 220px) minmax(100px, 135px) minmax(200px, 270px) 1fr;
+        grid-template-columns: minmax(150px, 200px) minmax(180px, 220px) minmax(100px, 135px) minmax(200px, 250px) auto;
         max-width: 1200px;
         align-items: center;
         text-align: left;
