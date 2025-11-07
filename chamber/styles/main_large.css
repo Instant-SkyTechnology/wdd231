@@ -78,7 +78,8 @@
     /**************GRID AND LIST VIEW STYLES***********/
     #memberContainer.list-view .member-card {
         display: grid;
-        grid-template-columns: 120px 170px 200px 135px 250px auto;
+        /* grid-template-columns:200px 220px 135px 270px auto; */
+        grid-template-columns: minmax(150px, 200px) minmax(180px, 220px) minmax(100px, 135px) minmax(200px, 270px) 1fr;
         max-width: 1200px;
         align-items: center;
         text-align: left;
@@ -100,11 +101,12 @@
 
     /* Smaller image and left-aligned */
     #memberContainer.list-view .member-card img {
-        width: 100px;
+        display: none;
+        /* width: 100px;
         height: 100px;
         margin-right: 1rem;
         border-radius: 6px;
-        object-fit: cover;
+        object-fit: cover; */
     }
 
     #memberContainer.list-view .member-card h3{
