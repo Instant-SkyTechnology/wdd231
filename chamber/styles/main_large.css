@@ -78,7 +78,8 @@
     /**************GRID AND LIST VIEW STYLES***********/
     #memberContainer.list-view .member-card {
         display: grid;
-        grid-template-columns: 120px 170px 200px 150px 250px auto;
+        grid-template-columns: 120px 170px 200px 135px 250px auto;
+        max-width: 1200px;
         align-items: center;
         text-align: left;
         padding: 1rem;
