@@ -245,13 +245,6 @@
     }
        
     /****************BUTTON********************/
-        .view-toggle {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin: 1rem;
-        }
-    
         .view-toggle button {
             font-size: 1rem;
             padding: 0.5rem 1rem;
