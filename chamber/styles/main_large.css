@@ -5,10 +5,8 @@
             --heading-font: "Roboto", sans-serif;
             --body-font: "Roboto", sans-serif;
             --primary-color: #E07A5F;
-            /* terra cotta */
             --secondary-color: #ddd;
             --text-color: #3D405B;
-            /* slate blue */
         }
 
     * {
@@ -25,15 +23,26 @@
         margin: 0;
         color: var(--text-color);
     }
+
+    h1,
+    h2,
+    h3,
+    header span {
+        font-weight: 700;
+        font-family: var(--heading-font);
+    }
+
+    h2,
+    h3,
+    p {
+        font-size: 1rem;
+    }
     
-   
     h1 {
         margin: 20px 0 5px 20px;
     }
 
-    /* Directory Layout */
-
-    /*********GRID AND LIST VIEW*****************/
+    /*********WIDER VIEW STYLES FOR GRID VIEW************/
     .view-toggle {
         display: flex;
         justify-content: center;
@@ -55,7 +64,6 @@
         display: flex;
         flex-direction: column;
         gap: 0;
-        /* Remove gap, since we'll use margins/borders instead */
     }
 
     /* Each member card */
@@ -66,20 +74,30 @@
         text-align: center;
         margin-bottom: 10px;
         transition: all 0.3s ease;
+        padding: 0 .5rem;
     }
 
-    /* Default grid card image */
+    .member-card a {
+        text-decoration: none;
+    }
+
+    .member-card h2,
+    h3,
+    p {
+        font-size: .9rem;
+        font-weight: 300;
+    }
+
     .member-card img {
         width: 250px;
-        height: 250px;
+        height: 170px;
         object-fit: contain;
     }
 
-    /**************GRID AND LIST VIEW STYLES***********/
+    /************WIDER VIEW STYLES FOR LIST VIEW***********/
     #memberContainer.list-view .member-card {
         display: grid;
-        /* grid-template-columns:200px 220px 135px 270px auto; */
-        grid-template-columns: minmax(120px, 200px) minmax(140px, 250px) minmax(100px, 140px) minmax(170px, 270px) 1fr;
+        grid-template-columns: minmax(120px, 200px) minmax(140px, 240px) minmax(100px, 140px) minmax(170px, 230px) auto;
         max-width: 1200px;
         width: 100%;
         align-items: center;
@@ -89,7 +107,11 @@
         box-shadow: none;
         margin: 0 auto;
         border-bottom: 1px solid #ddd;
-        overflow: hidden;
+
+        overflow: visible; /* allow wrapping to be seen */
+        word-wrap: break-word; /* break long words */
+        overflow-wrap: anywhere; /* break long URLs or words if needed */
+        white-space: normal;
     }
 
     /* Zebra striping effect */
@@ -101,14 +123,8 @@
         background-color: #ffffff;
     }
 
-    /* Smaller image and left-aligned */
     #memberContainer.list-view .member-card img {
         display: none;
-        /* width: 100px;
-        height: 100px;
-        margin-right: 1rem;
-        border-radius: 6px;
-        object-fit: cover; */
     }
 
     #memberContainer.list-view .member-card h3{
@@ -126,52 +142,32 @@
 
     .member-card h3 {
         margin-top: -15px;
+        font-weight: bold;
     }
     .member-card p a {
         padding: 0;
         margin: 0;
     }
 
-    /* Header & Nav */
-    /* header {
+    /***************HEADER*********************/
+    header {
         display: grid;
-        grid-template-columns: 26px auto 44px 5px;
-        align-items: end;
-        padding: 20px 0 10px 10px;
-        border-bottom: 3px solid #bbb;
-        border-top: 10px solid #E07A5F;
-        column-gap: 10px;
-        background-color: var(--secondary-color);;
-    } */
-
-        header {
-            display: grid;
-            grid-template-columns: 40px 1fr auto;
-            align-items: center;
-            /* padding: 20px 0 10px 10px; */
-            padding: 30px 20px 10px;
-            border-bottom: 3px solid #bbb;
-            border-top: 10px solid #E07A5F;
-            background-color: var(--secondary-color);
-        }
-        header span ,h1 {
-            flex: 1;
-            min-width: 150px;
-            word-wrap: break-word;
-            text-align: start;
-            font-size: 1.5rem;
-        }
-        h2,
-        h3,
-        p {
-            font-size: 1rem;
-        }
-        .member-card h2,
-        h3,
-        p {
-            font-size: .9rem;
-            font-weight: 300;
-        }
+        grid-template-columns: 40px 1fr auto;
+        align-items: center;
+        padding: 30px 20px 10px;
+        border-bottom: 5px solid #bbb;
+        background-color: var(--text-color);
+    }
+    header span ,h1 {
+        flex: 1;
+        min-width: 150px;
+        word-wrap: break-word;
+        text-align: start;
+        font-size: 1.5rem;
+    }
+    header span{
+        color: whitesmoke;
+    }
 
     .navigation {
         margin-bottom: -15px;
@@ -187,14 +183,6 @@
         width: 30px;
     }
 
-    h1,
-    h2,
-    h3,
-    header span {
-        font-weight: 700;
-        font-family: var(--heading-font);
-    }
-
     nav ul {
         list-style: none;
         display: flex;
@@ -208,7 +196,7 @@
     }
 
     nav a {
-        color: #3D405B;
+        color: whitesmoke;
         text-decoration: none;
     }
 
@@ -244,48 +232,47 @@
         display: none;
     }
        
-    /****************BUTTON********************/
-        .view-toggle button {
-            font-size: 1rem;
-            padding: 0.5rem 1rem;
-            border: 2px solid var(--text-color);
-            border-radius: 6px;
-            background-color: var(--secondary-color);
-            color: var(--text-color);
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-    
-        .view-toggle button:hover {
-            background-color: var(--primary-color);
-            color: var(--secondary-color);
-        }
-    
-        /* Highlight active view */
-        .view-toggle button.active {
-            background-color: var(--primary-color);
-            color: var(--secondary-color);
-            font-weight: bold;
-            box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
-        }
-    
-        /* Optional: give the icons a consistent width */
-        .view-toggle button {
-            width: 120px;
-            height: 38px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+    /*************BUTTON GRID AND LIST VIEW*************/
+    .view-toggle button {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+        border: 2px solid var(--text-color);
+        border-radius: 6px;
+        background-color: var(--secondary-color);
+        color: var(--text-color);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .view-toggle button:hover {
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+    }
+
+    /* Highlight active view */
+    .view-toggle button.active {
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        font-weight: bold;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+
+    /*consistent width */
+    .view-toggle button {
+        width: 120px;
+        height: 38px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
     /**************FOOTER***************/
     footer {
-        background-color: var(--secondary-color);
-        border-bottom: 10px solid var(--primary-color);
+        background-color: var(--text-color);
         font-family: 'Courier New', Courier, monospace;
         font-weight: 400;
         border-top: 5px solid #bbb;
-        color: #3D405B;
+        color: whitesmoke;
         padding: .5rem;
     }
 
@@ -304,6 +291,10 @@
         font-weight: bold;
     }
 
+    footer h3 {
+        font-weight: bold;
+    }
+
     /************SOCIAL MEDIA***********/
     .social-links {
         display: flex;
@@ -319,7 +310,7 @@
         align-items: center;
         width: 44px;
         height: 44px;
-        border: 1px solid #8a8ca5;
+        border: 1px solid whitesmoke;
         border-radius: 22px;
     }
 
@@ -329,6 +320,6 @@
     }
 
     .social-links a:hover {
-        background-color: #eee;
+        background-color: var(--primary-color);
     }
 }

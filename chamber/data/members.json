@@ -1,111 +1,74 @@
 [
     {
-        "name": "Sunrise Bakery",
-        "address": "123 Main St, [City Name]",
-        "phone": "(555) 111-2222",
-        "website": "https://sunrisebakery.com",
-        "image": "calgary-albert.jpg",
+        "name": "Mr. Lube",
+        "address": "2180 Meadowvale Blvd #200, Mississauga, ON L5N 5S3",
+        "phone": "(905) 828-0909",
+        "website": "https://www.mrlube.com/",
+        "image": "Mr. Lube.png",
         "membership": 3,
-        "description": "Family-owned bakery serving fresh pastries since 1998."
+        "description": "At Mr. Lube + Tires we offer fast, warranty-approved maintenance to help extend the life of your vehicle. We're best known as the oil change specialists, which we're proud of."
     },
     {
-        "name": "BlueWave Fitness",
-        "address": "456 Oak Ave, [City Name]",
-        "phone": "(555) 333-4444",
-        "website": "https://bluewavefitness.com",
-        "image": "calgary-albert.jpg",
-        "membership": 2,
+        "name": "Royal Bank of Canada",
+        "address": "10 York Mills Rd. 3rd Floor Toronto, ON M2P 0A2",
+        "phone": "(800)-769-2511",
+        "website": "https://www.rbcroyalbank.com",
+        "image": "rbc-logo-shield.svg",
+        "membership": 4,
         "description": "State-of-the-art fitness center with personal trainers."
     },
     {
-        "name": "Sunrise Bakery",
-        "address": "123 Main St, [City Name]",
-        "phone": "(555) 111-2222",
-        "website": "https://sunrisebakery.com",
-        "image": "sunrise-bakery.png",
-        "membership": 3,
-        "description": "Family-owned bakery serving fresh pastries since 1998."
+        "name": "Scotiabank",
+        "address": "845 Finch Avenue West, Toronto, ON M3J 2C7",
+        "phone": "416-665-8742",
+        "website": "https://www.scotiabank.com/ca/",
+        "image": "scotiabank-logo.svg",
+        "membership": 4,
+        "description": "Scotiabank (officially The Bank of Nova Scotia) is a major Canadian financial services company headquartered in Toronto. Founded in 1832 in Halifax, Nova Scotia"
     },
     {
-        "name": "Sunrise Bakery",
-        "address": "123 Main St, [City Name]",
-        "phone": "(555) 111-2222",
-        "website": "https://sunrisebakery.com",
-        "image": "sunrise-bakery.png",
+        "name": "Bell",
+        "address": "5115 Creekbank Rd, Mississauga, ON L4W 5R1",
+        "phone": "(888)-466-2453",
+        "website": "https://www.bell.ca/",
+        "image": "Bell-logo.svg",
         "membership": 3,
-        "description": "Family-owned bakery serving fresh pastries since 1998."
+        "description": "Bell Canada is a major Canadian telecommunications company that provides services like wireless, internet, and television to consumers and businesses."
     },
     {
-        "name": "Sunrise Bakery",
-        "address": "123 Main St, [City Name]",
-        "phone": "(555) 111-2222",
-        "website": "https://sunrisebakery.com",
-        "image": "sunrise-bakery.png",
-        "membership": 3,
-        "description": "Family-owned bakery serving fresh pastries since 1998."
+        "name": "Rogers",
+        "address": "1 Mt Pleasant Rd, Toronto, ON M4Y 2Y5",
+        "phone": "(416) 925-5386",
+        "website": "https://www.rogers.com/",
+        "image": "Rogers_logo.svg",
+        "membership": 4,
+        "description": "Rogers Communications is a major Canadian diversified communications and media company that provides wireless, cable, and media services."
     },
     {
-        "name": "Sunrise Bakery",
-        "address": "123 Main St, [City Name]",
-        "phone": "(555) 111-2222",
-        "website": "https://sunrisebakery.com",
-        "image": "sunrise-bakery.png",
+        "name": "Pacific Rubiales Energy Corporation",
+        "address": "333 Bay St., Toronto, ON M5H 2R2",
+        "phone": "(416) 362-7735",
+        "website": "https://www.fronteraenergy.ca",
+        "image": "frontera-energy.avif",
         "membership": 3,
-        "description": "Family-owned bakery serving fresh pastries since 1998."
+        "description": "We are dedicated to the exploration, development, production, transportation, storage, and sale of oil and natural gas in South America"
     },
     {
-        "name": "Sunrise Bakery",
-        "address": "123 Main St, [City Name]",
-        "phone": "(555) 111-2222",
-        "website": "https://sunrisebakery.com",
-        "image": "sunrise-bakery.png",
+        "name": "Tim Hortons",
+        "address": "130 King St. W, 3rd Floor, Toronto, ON, M5X 1K6",
+        "phone": "(888)-601-1616",
+        "website": "https://help.timhortons.ca/hc/en-ca",
+        "image": "tim-hortons.svg",
         "membership": 3,
-        "description": "Family-owned bakery serving fresh pastries since 1998."
+        "description": "Find answers to your questions about Tim Hortons, Tims Rewards, the Tims app, and more.."
     },
     {
-        "name": "Sunrise Bakery",
-        "address": "123 Main St, [City Name]",
+        "name": "6ix Pickle",
+        "address": "102 Berkeley St, Toronto",
         "phone": "(555) 111-2222",
-        "website": "https://sunrisebakery.com",
-        "image": "sunrise-bakery.png",
-        "membership": 3,
-        "description": "Family-owned bakery serving fresh pastries since 1998."
-    },
-    {
-        "name": "Sunrise Bakery",
-        "address": "123 Main St, [City Name]",
-        "phone": "(555) 111-2222",
-        "website": "https://sunrisebakery.com",
-        "image": "sunrise-bakery.png",
-        "membership": 3,
-        "description": "Family-owned bakery serving fresh pastries since 1998."
-    },
-    {
-        "name": "Sunrise Bakery",
-        "address": "123 Main St, [City Name]",
-        "phone": "(555) 111-2222",
-        "website": "https://sunrisebakery.com",
-        "image": "sunrise-bakery.png",
-        "membership": 3,
-        "description": "Family-owned bakery serving fresh pastries since 1998."
-    },
-    {
-        "name": "Sunrise Bakery",
-        "address": "123 Main St, [City Name]",
-        "phone": "(555) 111-2222",
-        "website": "https://sunrisebakery.com",
-        "image": "sunrise-bakery.png",
-        "membership": 3,
-        "description": "Family-owned bakery serving fresh pastries since 1998."
-    },
-    {
-        "name": "Sunrise Bakery",
-        "address": "123 Main St, [City Name]",
-        "phone": "(555) 111-2222",
-        "website": "https://sunrisebakery.com",
-        "image": "sunrise-bakery.png",
-        "membership": 3,
-        "description": "Family-owned bakery serving fresh pastries since 1998."
+        "website": "https://www.6ixpickle.com/",
+        "image": "6ix-Pickle.avif",
+        "membership": 2,
+        "description": "Our world class indoor pickle ball facility is the first of it's kind in downtown Toronto.."
     }
-    
 ]
