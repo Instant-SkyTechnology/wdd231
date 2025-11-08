@@ -176,9 +176,6 @@ html {
     /****************BUTTON********************/
     .view-toggle {
         display: none;
-        justify-content: center;
-        gap: 1rem;
-        margin: 1rem;
     }
 
     .view-toggle button {
