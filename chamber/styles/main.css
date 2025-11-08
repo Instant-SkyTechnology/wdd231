@@ -27,8 +27,7 @@ html {
         color: var(--text-color);
     }
     h1 {
-        margin: 10px 0 10px 10px;
-        border-bottom: 3px solid #bbb;
+        margin: 10px 0 20px 10px;
     }
 
     h1,
@@ -40,14 +39,6 @@ html {
     }
 
     /********MOBILE VIEW STYLES FOR GRID VIEW*********/
-   
-    .view-toggle {
-        display: flex;
-        justify-content: center;
-        margin: 1rem;
-        gap: 1rem;
-    }
-
     #memberContainer {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -184,7 +175,7 @@ html {
 
     /****************BUTTON********************/
     .view-toggle {
-        display: flex;
+        display: none;
         justify-content: center;
         gap: 1rem;
         margin: 1rem;
