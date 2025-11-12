@@ -179,7 +179,7 @@ html {
             margin-top: 0;
             margin-bottom: 0;
         }
-        
+
         /*********SECTION 1, 2 AND SECTION 3********/
         .a2-section {
             display: grid;
@@ -245,7 +245,7 @@ html {
         /* Weather info container */
         .weather-info {
             grid-area: info;
-            margin-top: -100px;
+            margin-top: -95px;
         }
         
         .weather-info p {

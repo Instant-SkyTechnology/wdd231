@@ -260,7 +260,7 @@
         /* Weather info container */
         .weather-info {
             grid-area: info;
-            margin-top: -92px;
+            margin-top: -90px;
         }
         
         .weather-info p {
