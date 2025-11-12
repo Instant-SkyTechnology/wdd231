@@ -1,0 +1,9 @@
+Geo coords [43.7001, -79.4163]
+
+https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
+
+
+API key:
+API key:56edcb845dab93e7e886ee7d7b38aee5 API Toronto
+
+Lat and Lon 43.76315701698374, -79.43933490469846 / 43.76315701698374, -79.4242287044823

@@ -1,0 +1,392 @@
+/********************* GLOBAL BASE STYLES *********************/
+:root {
+    --heading-font: "Roboto", sans-serif;
+    --body-font: "Roboto", sans-serif;
+    --primary-color: #E07A5F;
+    --secondary-color: #ddd;
+    --text-color: #3D405B;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+
+@media (max-width: 700px) {
+
+    body {
+        font-family: var(--body-font);
+        margin: 0;
+        color: var(--text-color);
+    }
+
+    h1 {
+        margin: 10px 0 10px 10px;
+    }
+
+    h1,
+    h2,
+    h3,
+    header span {
+        font-weight: 500;
+        font-family: var(--heading-font);
+    }
+
+    /***************HEADER*********************/
+    .header-container {
+        display: grid;
+        grid-template-columns: 24px auto 44px;
+        padding: 20px 0 5px 10px;
+        column-gap: 10px;
+    }
+         
+    header {
+        position: relative;
+        border-bottom: 5px solid #bbb;
+        background-color: var(--text-color);
+    }
+
+    
+    header img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border: 2px solid var(--primary-color);
+        border-radius: 4px;
+        height: 30px;
+        width: 30px;
+    }
+
+    header span,
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    header span {
+        color: whitesmoke;
+    }
+
+    /**************HUMBERGURG*****************/
+    .hamburger {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: whitesmoke;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .hamburger::before {
+        content: "\2630";
+        font-size: 1.5rem;
+    }
+
+    .hamburger.show::before {
+        content: "\00D7";
+        font-size: 1.5rem;
+    }
+
+    /**********NAVIGATION MOBILE VIEW***********/
+    .navigation {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .navigation.show {
+        display: block;
+    }
+
+    .navigation ul {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color: #999;
+    }
+
+    .navigation a {
+        display: block;
+        text-decoration: none;
+        border-bottom: 1px solid #ddd;
+        color: whitesmoke;
+        padding: .8rem 10px;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 100;
+    }
+
+    .navigation a:hover {
+        background-color: #E07A5F;
+    }
+
+    nav ul li {
+        border-bottom: solid 1px #333;
+    }
+
+    nav ul li.active a {
+        background-color: #555;
+    }
+
+    /***************MAIN***********************/
+
+        /**********HERO IMAGE MOBILE VIEW**********/
+        .hero {
+            position: relative;
+            max-width: 1200px;
+            align-items: center;
+            margin: 0 auto;
+        }
+        
+        .hero img {
+            display: block;
+            width: 100%;
+            height: 50vh;
+            object-fit: cover;
+        }
+
+        .hero article {
+            position: absolute;
+            width: 70%; /* scales the box but keeps position */
+            bottom: 20px;
+            right: 20px;
+            background: radial-gradient(#eeeeeeb7, #afb6b99e);
+            border: 1px solid #000;
+            padding: 0.5em;
+            box-shadow: 0 0 30px #111;
+            opacity: .95;
+            color: #000;
+        }
+
+        .hero article img {
+            width: 100px;
+            float: right;
+            height: 90px;
+            border: 1px solid #000;
+            padding: 0.1rem;
+            box-shadow: 0 0 30px #111;
+        }
+        
+        .hero article p {
+            padding: 0 .1em;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        
+        /*********SECTION 1, 2 AND SECTION 3********/
+        .a2-section {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            margin: 0 auto;
+            min-height: auto;
+            margin-bottom: 30px;
+            background-color: #f8f9fa;
+        }
+    
+        .a2-section h2 {
+            color: #eee;
+            background-color: #555;
+            font-size: 1em;
+            padding: 5px;
+            text-align: center;
+            margin-top: 0;
+        }
+    
+        .a2-section p {
+            font-size: 0.8em;
+            line-height: 1.5;
+            padding: 0 10px;
+            font-weight: 300;
+        }
+    
+        .lipa {
+            background: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            height: auto;
+        }
+            
+        /**********CURRENT WEATHER STYLES************/
+        .Card {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 10px;
+            padding: 0 5px 5px 5px;
+            max-width: 280px;
+            margin: 0 auto;
+        }
+        
+        /* Weather icon */
+        #weather-icon {
+            width: 80px;
+            height: 80px;
+        }
+        
+        .iconW {
+            text-align: center;
+        }
+        
+        .iconW figcaption {
+            margin-top: -20px;
+        }
+        
+        #town {
+            grid-area: town;
+        }
+        
+        /* Weather info container */
+        .weather-info {
+            grid-area: info;
+            margin-top: -100px;
+        }
+        
+        .weather-info p {
+            margin: 5px 0;
+            font-size: .8rem;
+            color: #333;
+            font-weight: 300;
+        }
+        
+        #forecast-container {
+            padding-top: 3px;
+            margin: 0 auto;
+            max-width: 280px;
+            width: 100%;
+        }
+
+        .para {
+            padding: 10px;
+        }
+
+        /***********RANDOM CARDS*************/
+        #cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .spotlight-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 1rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .spotlight-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.3rem;
+            color: #222;
+        }
+
+        .spotlight-card .membership-tag {
+            font-size: 0.8rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        /* --- Border line between header and content --- */
+        .spotlight-card .divider {
+            border-bottom: 2px solid #ccc;
+            margin-bottom: 1rem;
+        }
+
+        /* --- Content area below the border --- */
+        .spotlight-card img {
+            max-width: 120px;
+            height: auto;
+            margin-bottom: 0.75rem;
+        }
+
+        .spotlight-card .contact-info {
+            font-size: 0.9rem;
+            color: #333;
+            line-height: 1.4;
+        }
+
+        .spotlight-card .contact-info a {
+            color: #0077cc;
+            text-decoration: none;
+        }
+
+        .spotlight-card .contact-info a:hover {
+            text-decoration: underline;
+        }
+   
+    /**************FOOTER***************/
+    footer {
+        background-color: var(--text-color);
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 400;
+        border-top: 5px solid #bbb;
+        color: whitesmoke;
+        padding: .5rem;
+    }
+    
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        align-items: center;
+    }
+    
+    .footer-center .social-links {
+        justify-content: center;
+    }
+    
+    #lastModified {
+        color: var(--primary-color);
+        font-weight: bold;
+    }
+    
+    .footer-container h3 {
+        font-weight: bold;
+    }
+
+    footer h3, p {
+        font-size: .8rem;
+        font-weight: 300;
+    }
+    
+    /************SOCIAL MEDIA***********/
+    .social-links {
+        display: flex;
+        column-gap: 8px;
+        justify-content: center;
+        margin-top: 25PX;
+        margin-bottom: 25PX;
+    }
+    
+    .social-links a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 44px;
+        border: 1px solid whitesmoke;
+        border-radius: 22px;
+    }
+    
+    .social-links img {
+        width: 22px;
+        height: 22px;
+    }
+    
+    .social-links a:hover {
+        background-color: var(--primary-color);
+    }
+}

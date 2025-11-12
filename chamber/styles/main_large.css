@@ -40,6 +40,8 @@
     
     h1 {
         margin: 20px 0 5px 20px;
+        max-width: 1200px;
+        margin: 10px auto;
     }
 
     /*********WIDER VIEW STYLES FOR GRID VIEW************/
@@ -68,9 +70,10 @@
 
     /* Each member card */
     .member-card {
-        background: #f6f5f5;
+        background: #fff;
+        border: 1px solid #ddd;
         border-radius: 8px;
-        box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.238);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         text-align: center;
         margin-bottom: 10px;
         transition: all 0.3s ease;
@@ -82,8 +85,8 @@
     }
 
     .member-card h2,
-    h3,
-    p {
+    .member-card h3,
+    .member-card p {
         font-size: .9rem;
         font-weight: 300;
     }
@@ -150,87 +153,99 @@
     }
 
     /***************HEADER*********************/
-    header {
-        display: grid;
-        grid-template-columns: 40px 1fr auto;
-        align-items: center;
-        padding: 30px 20px 10px;
-        border-bottom: 5px solid #bbb;
-        background-color: var(--text-color);
-    }
-    header span ,h1 {
-        flex: 1;
-        min-width: 150px;
-        word-wrap: break-word;
-        text-align: start;
-        font-size: 1.5rem;
-    }
-    header span{
-        color: whitesmoke;
-    }
-
-    .navigation {
-        margin-bottom: -15px;
-    }
-
-    header img {
-        display: block;
-        width: 100%;
-        height: auto;
-        border: 2px solid var(--primary-color);
-        border-radius: 4px;
-        height: 30px;
-        width: 30px;
-    }
-
-    nav ul {
-        list-style: none;
-        display: flex;
-        gap: 1rem;
-        padding: 0;
-    }
-
-    nav a:hover {
-        background-color: #E07A5F;
-        color: var(--secondary-color);
-    }
-
-    nav a {
-        color: whitesmoke;
-        text-decoration: none;
-    }
-
-    nav ul li.active a {
-        color: var(--primary-color);
-        font-weight: bold;
-    }
-
-    nav ul li.active a:hover {
-        color: var(--secondary-color);
-    }
-
-    .navigation ul {
-        flex-direction: row;
-        justify-content: flex-end;
-        background-color: transparent;
-    }
-
-    .navigation li {
-        border: none;
-    }
-
-    .navigation a {
-        border: none;
-        padding: 0.5rem 1rem;
-        background: none;
-        font-family: 'Courier New', Courier, monospace;
-        font-weight: 100;
-        font-weight: bold;
-    }
-
-    #nav-button {
-        display: none;
-    }
+                /***************HEADER*********************/
+                .header-container {
+                    display: grid;
+                    grid-template-columns: 40px 1fr 10px auto;
+                    gap: .5rem;
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    text-align: left;
+                    align-items: start;
+                }
+        
+                header {
+                    align-items: center;
+                    padding: 30px 20px 10px;
+                    border-bottom: 5px solid #bbb;
+                    background-color: var(--text-color);
+                }
+        
+                header span,
+                h1 {
+                    flex: 1;
+                    min-width: 150px;
+                    word-wrap: break-word;
+                    text-align: start;
+                    font-size: 1.5rem;
+                }
+        
+                header span {
+                    color: whitesmoke;
+                }
+        
+                .navigation {
+                    margin-bottom: -15px;
+                }
+        
+                header img {
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                    border: 2px solid var(--primary-color);
+                    border-radius: 4px;
+                    height: 30px;
+                    width: 30px;
+                }
+        
+                nav ul {
+                    list-style: none;
+                    display: flex;
+                    gap: 1rem;
+                    padding: 0;
+                }
+        
+                nav a:hover {
+                    background-color: #E07A5F;
+                    color: var(--secondary-color);
+                }
+        
+                nav a {
+                    color: whitesmoke;
+                    text-decoration: none;
+                }
+        
+                nav ul li.active a {
+                    color: var(--primary-color);
+                    font-weight: bold;
+                }
+        
+                nav ul li.active a:hover {
+                    color: var(--secondary-color);
+                }
+        
+                .navigation ul {
+                    flex-direction: row;
+                    justify-content: flex-end;
+                    background-color: transparent;
+                }
+        
+                .navigation li {
+                    border: none;
+                }
+        
+                .navigation a {
+                    border: none;
+                    padding: 0.5rem 1rem;
+                    background: none;
+                    font-family: 'Courier New', Courier, monospace;
+                    font-weight: 100;
+                    font-weight: bold;
+                }
+        
+                #nav-button {
+                    display: none;
+                }
        
     /*************BUTTON GRID AND LIST VIEW*************/
     .view-toggle button {
@@ -291,7 +306,7 @@
         font-weight: bold;
     }
 
-    footer h3 {
+    .footer-container h3 {
         font-weight: bold;
     }
 
