@@ -109,7 +109,7 @@
         border-radius: 0;
         box-shadow: none;
         margin: 0 auto;
-        border-bottom: 1px solid #ddd;
+        /* border-bottom: 1px solid #ddd; */
 
         overflow: visible; /* allow wrapping to be seen */
         word-wrap: break-word; /* break long words */
