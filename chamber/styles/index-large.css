@@ -148,7 +148,8 @@
 
     .hero article {
         position: absolute;
-        width: 55%;
+        width: 60%;
+        height: 20%;
         /* bottom: 5%;
         right: 5%; */
         /* width: 550px; */
@@ -164,9 +165,15 @@
 
     .hero article img {
         float: right;
-        width: 120px;
-        height: auto;
+        width: 30%; 
+        height: auto; 
+        max-height: 100%; 
         object-fit: cover;
+        /* width: 120px;
+        max-width: 100%; */
+            /* ✅ Ensures image scales down within its container */
+        /* height: auto;
+        object-fit: cover; */
         border: 1px solid #000;
         padding: 0.1rem;
         box-shadow: 0 0 30px #111;
@@ -176,6 +183,8 @@
         padding: 0 .1em;
         margin-top: 0;
         margin-bottom: 0;
+        justify-content: center;
+        align-items: center;
     }
     
     /*******************MAIN********************/
