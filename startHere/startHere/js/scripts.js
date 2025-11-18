@@ -11,6 +11,3 @@ const result = document.querySelector("#results").innerHTML = `
 <p>Proxy ${myInfo.get("ordinance")} on ${myInfo.get("date")} in the ${myInfo.get("location")} Temple</p>
 <p>Your phone: ${myInfo.get("phone")}</p>
 <p>Your email is ${myInfo.get("email")}</p>`;
-
-
-
