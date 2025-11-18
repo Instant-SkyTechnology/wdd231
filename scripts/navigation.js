@@ -136,6 +136,10 @@ function createCourseCard(filteredcourses) {
         card.appendChild(credits);
         // card.append(name, cert, credits);
 
+        card.addEventListener("click", () => {
+            displayCourseDetails(course);
+        });
+
         container.appendChild(card);
     });
 
@@ -154,6 +158,32 @@ document.getElementById("lastModified").textContent = document.lastModified;
 document.querySelectorAll('meta[property^="og:"]').forEach(meta => {
     console.log(`${meta.getAttribute('property')} = ${meta.getAttribute('content')}`);
 });
+
+// DIALOG CONTAINER
+const courseDetails = document.querySelector("#course-details");
+
+function displayCourseDetails(course) {
+    courseDetails.innerHTML = `
+        <button id="closeModal">❌</button>
+        <h2>${course.subject} ${course.number}</h2>
+        <h3>${course.title}</h3>
+        <p><strong>Credits</strong>: ${course.credits}</p>
+        <p><strong>Certificate</strong>: ${course.certificate}</p>
+        <p>${course.description}</p>
+        <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+    `;
+
+    // Show dialog
+    courseDetails.showModal();
+
+    // Select close button AFTER inserting HTML
+    const closeDialogBox = document.querySelector("#closeModal");
+
+    // Close dialog on click
+    closeDialogBox.addEventListener("click", () => {
+        courseDetails.close();
+    });
+}
 
 
 
