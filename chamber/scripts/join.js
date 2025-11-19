@@ -13,7 +13,7 @@ const result = document.querySelector("#results").innerHTML = `
 <p>Last Name: ${myInfo.get("lastName")}</p>
 <p>Your phone: ${myInfo.get("mobile")}</p>
 <p>Your email is ${myInfo.get("email")}</p>
-<p>business name <strong>${myInfo.get("orgTitle")}</strong></p>
+<p>business name <strong>${myInfo.get("orgName")}</strong></p>
 <p><strong>Submitted at: <span id="timestamp"></span></strong></p>`;
 
 // Populate the timestamp span with the value from the URL
