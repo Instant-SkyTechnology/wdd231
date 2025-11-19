@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en-Us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Business Home page for the Toronto Chamber of Commerce">
+    <meta name="author" content="Steve B KALALA">
+
+    <meta property="og:title" content="Toronto Chamber of Commerce Directory">
+    <meta property="og:description"
+        content="Discover local businesses and organizations in the Toronto Chamber of Commerce Directory.">
+    <meta property="og:image" content="https://instant-skytechnology.github.io/wdd231/images/profiles.png">
+    <meta property="og:url" content="https://instant-skytechnology.github.io/wdd231/chamber/directory.html">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <title>Join - Toronto Chamber of Commerce Directory</title>
+    <link rel="icon" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/index-main.css">
+    <link rel="stylesheet" href="styles/index-large.css">
+    <!-- <script src="scripts/directory.js" defer></script> -->
+     <link rel="stylesheet" href="styles/join-small.css">
+     <link rel="stylesheet" href="styles/join-large.css">
+    <script src="scripts/index.js" defer></script>
+    <script type="module" src="scripts/spotlight.js"></script>
+    <script type="module" src="scripts/join.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="fufu">
+                <img src="images/favicon.png" alt="site logo" width="70" height="70">
+            </div>
+
+            <div class="fufu">
+                <span>Toronto Chamber of Commerce</span>
+            </div>
+
+            <div class="fufu">
+                <button id="nav-button" class="hamburger" aria-label="navigation"></button>
+            </div>
+
+            <nav id="nav-bar" class="navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li class="active"><a href="join.html">Join</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <h1>Join</h1>
+        <div class="container">
+            <div class="fm">
+                <h2>Membership Application Form</h2>
+                <form method="GET" action="thankyou.html" class="designOne">
+                    <label>First Name:
+                        <input type="text" name="firstName" required title="First Name" autocomplete="given-name">
+                    </label>
+                
+                    <label>Last Name:
+                        <input type="text" name="lastName" required title="Last Name" autocomplete="family-name">
+                    </label>
+                
+                    <label>Organizational Name:
+                        <input type="text" name="orgTitle" title="Organizational Title" autocomplete="organization-title"
+                            pattern="[A-Za-z\s-]{7,}" placeholder="Minimum 7 letters">
+                    </label>
+                
+                    <label>Email:
+                        <input type="email" name="email" required title="Email Address" autocomplete="email"
+                            placeholder="example@domain.com">
+                    </label>
+                
+                    <label>Cell Phone:
+                        <input type="tel" name="mobile" required title="Mobile Phone" autocomplete="tel">
+                    </label>
+                
+                    <!-- <label>Organization Name:
+                        <input type="text" name="orgName" required title="Organization Name" autocomplete="organization">
+                    </label> -->
+                
+                    <label>Membership Level:
+                        <select name="membership" required title="Membership Level">
+                            <option value="">Select...</option>
+                            <option value="np">NP Membership (No Fee)</option>
+                            <option value="bronze">Bronze Membership</option>
+                            <option value="silver">Silver Membership</option>
+                            <option value="gold">Gold Membership</option>
+                        </select>
+                    </label>
+                
+                    <label>Organization Description:
+                        <br><textarea name="orgDesc" title="Organization Description"></textarea>
+                    </label>
+                
+                    <input type="hidden" name="timestamp" id="timestamp">
+                
+                    <input type="submit" value="Apply for Membership">
+                </form>
+            </div>
+
+            <div class="cards">
+                <h2>Membership Level Titles</h2>
+                <div class="card" id="npCard">
+                    <h3>No Profit Membership Level</h3><a href="#" data-modal="npModal">More Info</a>
+                </div>
+                <div class="card" id="bronzeCard">
+                    <h3>Bronze Membership Level</h3><a href="#" data-modal="bronzeModal">More Info</a>
+                </div>
+                <div class="card" id="silverCard">
+                    <h3>Silver Membership Level</h3><a href="#" data-modal="silverModal">More Info</a>
+                </div>
+                <div class="card" id="goldCard">
+                    <h3>Gold Membership Level</h3><a href="#" data-modal="goldModal">More Info</a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <h3>Toronto Chamber of Commerce</h3>
+                <p>123 Main Street, Toronto, ST 12345</p>
+                <p>info@torontoChamber.com</p>
+                <p>(555) 123-4567</p>
+            </div>
+
+            <div class="footer-center">
+                <div class="social-links">
+                    <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.svg" alt="facebook"
+                            width="16" height="16"></a>
+                    <a href="https://www.twitter.com/" target="_blank"><img src="images/twitter-x.svg" alt="twiter"
+                            width="16" height="16"></a>
+                    <a href="https://www.linkedin.com/" target="_blank"><img src="images/linkedin.svg" alt="linkedin"
+                            width="16" height="16"></a>
+                    <a href="https://github.com/Instant-SkyTechnology/wdd131/index.html" target="_blank"><img
+                            src="images/github.svg" alt="github" width="16" height="16"></a>
+                    <a href="https://www.microsoft.com/en-ca/microsoft-teams/log-in?msockid=37503da8c2d962d133de2ba5c3f663f1"
+                        target="_blank"><img src="images/microsoft-teams.svg" alt="microsoft-teams" width="16"
+                            height="16"></a>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <h3>WDD 231 Class Project</h3>
+                <p>Developed by Steve B. KALALA</p>
+                <p>&copy; <span id="year"></span> Toronto Chamber of Commerce</p>
+                <p>Last Modified: <span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

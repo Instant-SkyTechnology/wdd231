@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en-Us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thank you page for the Toronto Chamber of Commerce">
+    <meta name="author" content="Steve B KALALA">
+
+    <meta property="og:title" content="Toronto Chamber of Commerce Directory">
+    <meta property="og:description"
+        content="Discover local businesses and organizations in the Toronto Chamber of Commerce Directory.">
+    <meta property="og:image" content="https://instant-skytechnology.github.io/wdd231/images/profiles.png">
+    <meta property="og:url" content="https://instant-skytechnology.github.io/wdd231/chamber/directory.html">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <title>Thank you - Toronto Chamber of Commerce Directory</title>
+    <link rel="icon" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/index-main.css">
+    <link rel="stylesheet" href="styles/index-large.css">
+    
+        <!-- Inserted CSS for MAIN -->
+        <style>
+            html,
+            body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+        
+            /* Body pushes footer down */
+            body {
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+            }
+        
+            /* Main area aligns well on all screen sizes */
+            main {
+                flex: 1;
+                padding: 1.5rem;
+                max-width: 1200px;
+                width: 100%;
+                margin: 0 auto;
+                box-sizing: border-box;
+            }
+        
+            @media (min-width: 701px) {
+                main {
+                    padding: 2rem 3rem;
+                }
+            }
+        </style>
+    <script src="scripts/index.js" defer></script>
+    <script type="module" src="scripts/spotlight.js"></script>
+    <script type="module" src="scripts/join.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="fufu">
+                <img src="images/favicon.png" alt="site logo" width="70" height="70">
+            </div>
+
+            <div class="fufu">
+                <span>Toronto Chamber of Commerce</span>
+            </div>
+
+            <div class="fufu">
+                <button id="nav-button" class="hamburger" aria-label="navigation"></button>
+            </div>
+
+            <nav id="nav-bar" class="navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li class="active"><a href="join.html">Join</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+            
+            <div id="results"></div>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <h3>Toronto Chamber of Commerce</h3>
+                <p>123 Main Street, Toronto, ST 12345</p>
+                <p>info@torontoChamber.com</p>
+                <p>(555) 123-4567</p>
+            </div>
+
+            <div class="footer-center">
+                <div class="social-links">
+                    <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.svg" alt="facebook"
+                            width="16" height="16"></a>
+                    <a href="https://www.twitter.com/" target="_blank"><img src="images/twitter-x.svg" alt="twiter"
+                            width="16" height="16"></a>
+                    <a href="https://www.linkedin.com/" target="_blank"><img src="images/linkedin.svg" alt="linkedin"
+                            width="16" height="16"></a>
+                    <a href="https://github.com/Instant-SkyTechnology/wdd131/index.html" target="_blank"><img
+                            src="images/github.svg" alt="github" width="16" height="16"></a>
+                    <a href="https://www.microsoft.com/en-ca/microsoft-teams/log-in?msockid=37503da8c2d962d133de2ba5c3f663f1"
+                        target="_blank"><img src="images/microsoft-teams.svg" alt="microsoft-teams" width="16"
+                            height="16"></a>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <h3>WDD 231 Class Project</h3>
+                <p>Developed by Steve B. KALALA</p>
+                <p>&copy; <span id="year"></span> Toronto Chamber of Commerce</p>
+                <p>Last Modified: <span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

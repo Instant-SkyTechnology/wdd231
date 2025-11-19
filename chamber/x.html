@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Chamber</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Basic layout */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        form {
+            flex: 1 1 300px;
+        }
+
+        .cards {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            flex: 1 1 300px;
+        }
+
+        @media(min-width: 768px) {
+            .cards {
+                flex-direction: column;
+            }
+        }
+
+        /* Card animation */
+        .card {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease;
+            background: #f5f5f5;
+            padding: 1rem;
+            border-radius: 8px;
+        }
+
+        .card.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            max-width: 500px;
+            width: 90%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Chamber of Commerce</h1>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="join.html">Join</a>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <form method="get" action="thankyou.html">
+            <label>First Name:
+                <input type="text" name="firstName" required title="First Name" autocomplete="given-name">
+            </label>
+
+            <label>Last Name:
+                <input type="text" name="lastName" required title="Last Name" autocomplete="family-name">
+            </label>
+
+            <label>Organizational Title:
+                <input type="text" name="orgTitle" title="Organizational Title" autocomplete="organization-title"
+                    pattern="[A-Za-z\s-]{7,}" placeholder="Minimum 7 letters">
+            </label>
+
+            <label>Email:
+                <input type="email" name="email" required title="Email Address" autocomplete="email"
+                    placeholder="example@domain.com">
+            </label>
+
+            <label>Mobile Phone:
+                <input type="tel" name="mobile" required title="Mobile Phone" autocomplete="tel">
+            </label>
+
+            <label>Organization Name:
+                <input type="text" name="orgName" required title="Organization Name" autocomplete="organization">
+            </label>
+
+            <label>Membership Level:
+                <select name="membership" required title="Membership Level">
+                    <option value="">Select...</option>
+                    <option value="np">NP Membership (No Fee)</option>
+                    <option value="bronze">Bronze Membership</option>
+                    <option value="silver">Silver Membership</option>
+                    <option value="gold">Gold Membership</option>
+                </select>
+            </label>
+
+            <label>Organization Description:
+                <textarea name="orgDesc" title="Organization Description"></textarea>
+            </label>
+
+            <input type="hidden" name="timestamp" id="timestamp">
+
+            <input type="submit" value="Submit Application">
+        </form>
+
+        <div class="cards">
+            <div class="card" id="npCard">
+                <h3>NP Membership</h3><a href="#" data-modal="npModal">More Info</a>
+            </div>
+            <div class="card" id="bronzeCard">
+                <h3>Bronze Membership</h3><a href="#" data-modal="bronzeModal">More Info</a>
+            </div>
+            <div class="card" id="silverCard">
+                <h3>Silver Membership</h3><a href="#" data-modal="silverModal">More Info</a>
+            </div>
+            <div class="card" id="goldCard">
+                <h3>Gold Membership</h3><a href="#" data-modal="goldModal">More Info</a>
+            </div>
+        </div>
+
+        <!-- Modals -->
+        <div class="modal" id="npModal">
+            <div class="modal-content">
+                <h3>NP Membership Benefits</h3>
+                <p>Special events and networking.</p><button class="close">Close</button>
+            </div>
+        </div>
+        <div class="modal" id="bronzeModal">
+            <div class="modal-content">
+                <h3>Bronze Membership Benefits</h3>
+                <p>Includes advertising & event discounts.</p><button class="close">Close</button>
+            </div>
+        </div>
+        <div class="modal" id="silverModal">
+            <div class="modal-content">
+                <h3>Silver Membership Benefits</h3>
+                <p>Enhanced advertising, training, and event access.</p><button class="close">Close</button>
+            </div>
+        </div>
+        <div class="modal" id="goldModal">
+            <div class="modal-content">
+                <h3>Gold Membership Benefits</h3>
+                <p>All perks, spotlight features, and premium events.</p><button class="close">Close</button>
+            </div>
+        </div>
+
+        <script>
+            // Set timestamp
+            document.getElementById('timestamp').value = new Date().toISOString();
+
+            // Animate cards
+            window.addEventListener('load', () => {
+                document.querySelectorAll('.card').forEach((card, i) => {
+                    setTimeout(() => card.classList.add('show'), i * 200);
+                });
+            });
+
+            // Modal functionality
+            document.querySelectorAll('.cards a').forEach(link => {
+                link.addEventListener('click', e => {
+                    e.preventDefault();
+                    document.getElementById(link.dataset.modal).style.display = 'flex';
+                });
+            });
+            document.querySelectorAll('.modal .close').forEach(btn => {
+                btn.addEventListener('click', e => {
+                    btn.closest('.modal').style.display = 'none';
+                });
+            });
+        </script>
+
+    </main>
+    <footer>
+        <p>&copy; 2025 Chamber of Commerce</p>
+    </footer>
+
+</body>
+
+</html>
