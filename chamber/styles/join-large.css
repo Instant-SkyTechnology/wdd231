@@ -208,7 +208,7 @@
             transform: translateY(20px);
             transition: all 0.5s ease;
             background: #eee;
-            border: 1px solid #ddd;
+            border: 1px solid var(--secondary-color);
             padding: 1rem;
             border-radius: 8px;
             color: #3D405B;
@@ -237,7 +237,7 @@
 
 
                 h1 {
-                    color: #3D405B;
+                    color: var(--text-color);
                 }
         
                 form {
@@ -252,7 +252,7 @@
         
                     h3 {
                         font-size: .9rem;
-                        color: #E07A5F;
+                        color: var(--primary-color);
                         margin: 1.5rem 0 .2rem 0;
                         border-bottom: 1px solid #eee;
                     }
@@ -270,7 +270,7 @@
                         border-left-width: 5px;
                         border-left-color: #555;
                         font-size: 1rem;
-                        color: #3D405B;
+                        color: var(--text-color);
                         width: 250px;
                     }
         
