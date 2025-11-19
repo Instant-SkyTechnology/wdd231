@@ -156,7 +156,8 @@ html {
                             margin: 1rem auto;
                             font-size: .9rem;
                         }
-                a {
+                    
+                        .cards a {
                     text-decoration: none;
                     background-color: var(--text-color);
                     color: white;
@@ -165,7 +166,7 @@ html {
                     border-radius: 7px;
                 }
         
-                a:hover {
+                .cards a:hover {
                     background-color: var(--primary-color);
                 }
         /* h1 {
