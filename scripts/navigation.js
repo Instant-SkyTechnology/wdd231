@@ -112,7 +112,7 @@ cse.addEventListener("click", () => {
 
 //createCourseCard function
 function createCourseCard(filteredcourses) {
-    const container = document.querySelector(".pCard");
+    const container = document.querySelector(".Card");
     container.innerHTML = "";
 
     filteredcourses.forEach(course => {
