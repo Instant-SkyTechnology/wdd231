@@ -211,7 +211,7 @@
             border: 1px solid var(--secondary-color);
             padding: 1rem;
             border-radius: 8px;
-            color: #3D405B;
+            color: var(--text-color);
             text-align: center;
             margin-top: -15px;
             margin-bottom: 15px;
@@ -250,7 +250,7 @@
                         padding-top: .2rem;
                     }
         
-                    h3 {
+                    form h3 {
                         font-size: .9rem;
                         color: var(--primary-color);
                         margin: 1.5rem 0 .2rem 0;
