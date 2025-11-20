@@ -155,7 +155,7 @@ html {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: 1rem auto;
+        margin: 1rem .7rem;
         font-size: .9rem;
         animation: slideFadeIn 0.9s ease forwards;
     }
