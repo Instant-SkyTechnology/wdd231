@@ -30,7 +30,7 @@
      <link rel="stylesheet" href="styles/join-large.css">
     <script src="scripts/index.js" defer></script>
     <script type="module" src="scripts/spotlight.js"></script>
-    <script src="scripts/join.js" defer></script>
+    
 </head>
 
 <body>
@@ -113,26 +113,49 @@
             <div class="cards">
                 <h2>Membership Level Titles</h2>
                 <div class="card" id="npCard">
-                    <h3>No Profit Membership Level</h3><button id="npMember">More Info</button>
+                    <h3>No Profit Membership Level</h3><button  id="npBtn">More Info</button>
                 </div>
                 <div class="card" id="bronzeCard">
-                    <h3>Bronze Membership Level</h3><button id="bronzeMember">More Info</button>
+                    <h3>Bronze Membership Level</h3><button  id="bronzeBtn">More Info</button>
                 </div>
                 <div class="card" id="silverCard">
-                    <h3>Silver Membership Level</h3><button id="silverMember">More Info</button>
+                    <h3>Silver Membership Level</h3><button id="silverBtn">More Info</button>
                 </div>
                 <div class="card" id="goldCard">
-                    <h3>Gold Membership Level</h3><button id="goldMember">More Info</button>
+                    <h3>Gold Membership Level</h3><button id="goldBtn">More Info</button>
                 </div>
             </div>
 
-
+            <!-- Dialogs -->
+            <dialog id="npMember">
+                <h3>Basic Membership Benefits</h3>
+                <p>Special events and networking.</p>
+                <button class="close-btn">Close</button>
+            </dialog>
+            
+            <dialog id="bronzeMember">
+                <h3>Silver Membership Benefits</h3>
+                <p>Includes advertising & event discounts.</p>
+                <button class="close-btn">Close</button>
+            </dialog>
+            
+            <dialog id="silverMember">
+                <h3>Gold Membership Benefits</h3>
+                <p>Enhanced advertising, training, and event access.</p>
+                <button class="close-btn">Close</button>
+            </dialog>
+            
+            <dialog id="goldMember">
+                <h3>Platinum Membership Benefits</h3>
+                <p>All perks, spotlight features, and premium events.</p>
+                <button class="close-btn">Close</button>
+            </dialog>
 
         </div>
-            <dialog id="dialogBox">
+            <!-- <dialog id="dialogBox" class="dialog">
                 <div id="dialogContent"></div>
                 <button id="closeButton">Close</button>
-            </dialog>
+            </dialog> -->
     </main>
 
     <footer>
@@ -168,6 +191,7 @@
             </div>
         </div>
     </footer>
+    <script src="scripts/join.js"></script>
 </body>
 
 </html>

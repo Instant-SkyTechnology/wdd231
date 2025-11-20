@@ -21,69 +21,89 @@ document.getElementById("timestamp").textContent = myInfo.get("timestamp")
     ? new Date(myInfo.get("timestamp")).toLocaleString()
     : "N/A";
 
-// const npModal = document.querySelector("#npModal");
-// const bronzeModal = document.querySelector("#bronzeModal");
-// const silverModal = document.querySelector("#silverModal");
-// const goldModal = document.querySelector("#goldModal");
 
-// const dialogBox = document.querySelector("#dialogBox");
-// const closeButton = document.querySelector("#closeButton");
-// const dialogBoxText = document.querySelector("#dialogContent");
+// Buttons
+const npBtn = document.getElementById('npBtn');
+const bronzeBtn = document.getElementById('bronzeBtn');
+const silverBtn = document.getElementById('silverBtn');
+const goldBtn = document.getElementById('goldBtn');
 
-// npModal.addEventListener("click", () => {
-//     dialogBox.showModal();
-//     dialogBoxText.innerHTML = `Special events and networking.`
-// });
+// Dialogs
+const npMember = document.getElementById('npMember');
+const bronzeMember = document.getElementById('bronzeMember');
+const silverMember = document.getElementById('silverMember');
+const goldMember = document.getElementById('goldMember');
 
-// bronzeModal.addEventListener("click", () => {
-//     dialogBox.showModal();
-//     dialogBoxText.innerHTML = `Includes advertising & event discounts.`
-// });
+// Open dialogs
+npBtn.addEventListener('click', () => npMember.showModal());
+bronzeBtn.addEventListener('click', () => bronzeMember.showModal());
+silverBtn.addEventListener('click', () => silverMember.showModal());
+goldBtn.addEventListener('click', () => goldMember.showModal());
 
-// silverModal.addEventListener("click", () => {
-//     dialogBox.showModal();
-//     dialogBoxText.innerHTML = `Enhanced advertising, training, and event access.`
-// });
-
-// goldModal.addEventListener("click", () => {
-//     dialogBox.showModal();
-//     dialogBoxText.innerHTML = `All perks, spotlight features, and premium events.`
-// });
-
-// closeButton.addEventListener("click", () => {
-//     dialogBox.close();
-// });
-
-const npMember = document.querySelector("#npMember");
-const bronzeMember = document.querySelector("#bronzeMember");
-const silverMember = document.querySelector("#silverMember");
-const goldMember = document.querySelector("#goldMember");
-
-const dialogBox = document.querySelector("#dialogBox");
-const closeButton = document.querySelector("#closeButton");
-const dialogContent = document.querySelector("#dialogContent");
-
-npMember.addEventListener("click", () => {
-    dialogContent.textContent = "Special events and networking.";
-    dialogBox.showModal();
+// Close dialogs
+document.querySelectorAll('.close-btn').forEach(btn => {
+    btn.addEventListener('click', () => btn.closest('dialog').close());
 });
 
-bronzeMember.addEventListener("click", () => {
-    dialogContent.textContent = "Includes advertising & event discounts.";
-    dialogBox.showModal();
-});
 
-silverMember.addEventListener("click", () => {
-    dialogContent.textContent = "Enhanced advertising, training, and event access.";
-    dialogBox.showModal();
-});
 
-goldMember.addEventListener("click", () => {
-    dialogContent.textContent = "All perks, spotlight features, and premium events.";
-    dialogBox.showModal();
-});
+// document.addEventListener("DOMContentLoaded", () => {
 
-closeButton.addEventListener("click", () => {
-    dialogBox.close();
-});
+//     const openButton1 = document.querySelector("#openButton1");
+//     const openButton2 = document.querySelector("#openButton2");
+//     const openButton3 = document.querySelector("#openButton3");
+//     const openButton4 = document.querySelector("#openButton4");
+
+//     const dialogBox = document.querySelector("#dialogBox");
+//     const closeButton = document.querySelector("#closeButton");
+//     const dialogContent = document.querySelector("#dialogContent");
+
+//     // Prevent errors if dialog is missing
+//     if (!dialogBox || !dialogContent || !closeButton) {
+//         console.error("❌ Dialog elements not found in the DOM.");
+//         return;
+//     }
+
+//     if (openButton1) {
+//         openButton1.addEventListener("click", () => {
+//             dialogBox.showModal();
+//             dialogContent.textContent = "Special events and networking.";
+//         });
+//     }
+
+//     if (openButton2) {
+//         openButton2.addEventListener("click", () => {
+//             dialogBox.showModal();
+//             dialogContent.textContent = "Includes advertising & event discounts.";
+//         });
+//     }
+
+//     if (openButton3) {
+//         openButton3.addEventListener("click", () => {
+//             dialogBox.showModal();
+//             dialogContent.textContent = "Enhanced advertising, training, and event access.";
+//         });
+//     }
+
+//     if (openButton4) {
+//         openButton4.addEventListener("click", () => {
+//             dialogBox.showModal();
+//             dialogContent.textContent = "All perks, spotlight features, and premium events.";
+//         });
+//     }
+
+//     closeButton.addEventListener("click", () => {
+//         dialogBox.close();
+//     });
+
+//     alert("JOIN.JS IS RUNNING!");
+
+//     console.log("openButton1 =", openButton1);
+//     console.log("dialogBox =", dialogBox);
+//     console.log("closeButton =", closeButton);
+
+// });
+
+
+
 
