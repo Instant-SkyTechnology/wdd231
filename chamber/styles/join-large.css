@@ -129,67 +129,15 @@
         display: none;
     }
 
-    /************HERO IMAGE***************/
-    .hero {
-        position: relative;
-        max-width: 1200px;
-        align-items: center;
-        margin: 0 auto;
-        font-size: .9rem;
-        font-weight: 300;
-    }
 
-    .hero img {
-        display: block;
-        width: 100%;
-        height: 60vh;
-        object-fit: cover;
-    }
-
-    .hero article {
-        position: absolute;
-        width: 60%;
-        /* bottom: 5%;
-        right: 5%; */
-        /* width: 550px; */
-        bottom: 30px;
-        right: 30px;
-        background: radial-gradient(#eeeeeeb7, #afb6b99e);
-        border: 1px solid #000;
-        padding: 0.5em;
-        box-shadow: 0 0 30px #111;
-        opacity: .95;
-        color: #000;
-    }
-
-    .hero article img {
-        float: right;
-        /* width: 30%; 
-        height: auto; 
-        max-height: 100%; 
-        object-fit: cover; */
-        width: 120px;
-        max-width: 100%;
-        /* ✅ Ensures image scales down within its container */
-        height: auto;
-        object-fit: cover;
-        border: 1px solid #000;
-        padding: 0.1rem;
-        box-shadow: 0 0 30px #111;
-    }
-
-    .hero article p {
-        padding: 0 .1em;
-        margin-top: 0;
-        margin-bottom: 0;
-    }
 
     /*******************MAIN********************/
     main {
         max-width: 1200px;
         margin: 0 auto;
     }
-                /*********ADVANCED FORM STYLES************/
+                
+    /*********ADVANCED FORM STYLES************/
                 .container {
                     display: flex;
                     flex-wrap: wrap;
@@ -206,18 +154,35 @@
         /* Card animation */
         .card {
             transform: translateY(20px);
-            transition: all 0.5s ease;
+            transition: all 0.9s ease;
             background: #eee;
             border: 1px solid var(--secondary-color);
-            padding: 1rem;
-            border-radius: 8px;
+            padding: .1rem 1rem 1rem;
+            border-radius: 0 30px 0 30px;
             color: var(--text-color);
-            text-align: center;
             margin-top: -15px;
             margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            animation: slideFadeIn 0.9s ease forwards;
         }
 
-        .cards a {
+        /* Animation keyframes */
+        @keyframes slideFadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+        
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .cards button {
             text-decoration: none;
             background-color: var(--text-color);
             color: white;
@@ -226,22 +191,44 @@
             border-radius: 7px;
         }
 
-        a:hover {
+        .cards button:hover {
             background-color: var(--primary-color);
         }
-    
-        .card.show {
-            opacity: 1;
-            transform: translateY(0);
+
+        /*******Dialog Box**************/
+        /* #dialogBox {
+            background-color: lavender;
         }
 
+        #closeButton {
+            background-color: violet;
+        }
 
-                h1 {
-                    color: var(--text-color);
-                }
+        ::backdrop {
+            background-color: rgb(0, 0, 0, 40%);
+        } */
         
+        .dialog {
+            position: fixed !important;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) !important;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: none;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            z-index: 999999 !important;
+        }
+        
+        dialog::backdrop {
+            background: rgba(0, 0, 0, 0.5) !important;
+        }
+    
+       
                 form {
                     margin: 1rem 2%;
+                }
         
                     label {
                         display: block;
@@ -261,7 +248,7 @@
                     input[type=tel],
                     input[type=date],
                     input[type=email],
-                    select, textarea {
+                    select, form textarea {
                         display: block;
                         margin: .1rem 0 1rem 0;
                         padding: .3rem;
@@ -303,7 +290,7 @@
                     input[type=submit]:hover {
                         background-color: var(--primary-color);
                     }
-                }
+                
         
                 input:-webkit-autofill {
                     -webkit-text-fill-color: var(--text-color);

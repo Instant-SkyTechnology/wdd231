@@ -30,7 +30,7 @@
      <link rel="stylesheet" href="styles/join-large.css">
     <script src="scripts/index.js" defer></script>
     <script type="module" src="scripts/spotlight.js"></script>
-    <script type="module" src="scripts/join.js"></script>
+    <script src="scripts/join.js" defer></script>
 </head>
 
 <body>
@@ -113,20 +113,26 @@
             <div class="cards">
                 <h2>Membership Level Titles</h2>
                 <div class="card" id="npCard">
-                    <h3>No Profit Membership Level</h3><a href="#" data-modal="npModal">More Info</a>
+                    <h3>No Profit Membership Level</h3><button id="npMember">More Info</button>
                 </div>
                 <div class="card" id="bronzeCard">
-                    <h3>Bronze Membership Level</h3><a href="#" data-modal="bronzeModal">More Info</a>
+                    <h3>Bronze Membership Level</h3><button id="bronzeMember">More Info</button>
                 </div>
                 <div class="card" id="silverCard">
-                    <h3>Silver Membership Level</h3><a href="#" data-modal="silverModal">More Info</a>
+                    <h3>Silver Membership Level</h3><button id="silverMember">More Info</button>
                 </div>
                 <div class="card" id="goldCard">
-                    <h3>Gold Membership Level</h3><a href="#" data-modal="goldModal">More Info</a>
+                    <h3>Gold Membership Level</h3><button id="goldMember">More Info</button>
                 </div>
             </div>
-        </div>
 
+
+
+        </div>
+            <dialog id="dialogBox">
+                <div id="dialogContent"></div>
+                <button id="closeButton">Close</button>
+            </dialog>
     </main>
 
     <footer>
