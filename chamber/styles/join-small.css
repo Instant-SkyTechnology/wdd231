@@ -136,13 +136,11 @@ html {
     }
 
     /***************MAIN***********************/
-    /*********ADVANCED FORM STYLES************/
     .cards {
         display: block;
         margin-bottom: 2rem;
     }
 
-    
     .card {
         transform: translateY(20px);
         transition: all 0.9s ease;
@@ -185,8 +183,13 @@ html {
     .cards button:hover {
         background-color: var(--primary-color);
     }
-        
+
+    /*********DIALOG*************/
+    dialog::backdrop {
+        background: rgba(0, 0, 0, 0.5);
+    }
     
+    /*********ADVANCED FORM STYLES************/
     form {
         margin: 1rem 3%;
     }
@@ -198,8 +201,6 @@ html {
         padding-top: .2rem;
     }
 
-                        
-    
     input[type=text],
     input[type=tel],
     input[type=date],
@@ -247,18 +248,9 @@ html {
         background-color: var(--primary-color);
     }
         
-    
     input:-webkit-autofill {
         -webkit-text-fill-color: var(--text-color);
     }
-
-    #results {
-        background-color: #F4F1DE;
-        padding: 0 1rem;
-        border: 1px solid var(--primary-color);
-        border-radius: 6px;
-    }
-
 
     /**************FOOTER***************/
     footer {

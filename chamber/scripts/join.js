@@ -1,109 +1,67 @@
-const getString = window.location.search;
-console.log(getString);
+// Fetch content from the thankyou page
+document.addEventListener("DOMContentLoaded", () => {
 
-// const myInfo = new URLSearchParams(window.location.search); shorthand nethod
+    // Set timestamp into hidden field ONLY IF the field exists (form page only)
+    const timestampField = document.getElementById("timestamp");
+    if (timestampField) {
+        timestampField.value = new Date().toISOString();
+    }
 
-const myInfo = new URLSearchParams(getString);
-console.log(myInfo);
+    // Thankyou.html result display
+    const resultsBox = document.querySelector("#results");
+    if (!resultsBox) return; // prevents running on the form page
 
-const result = document.querySelector("#results").innerHTML = `
-<h2><strong>Thank You for Your Application!</strong></h2>
-<p>We have received your application with the following details:</p>
-<p>First Name: ${myInfo.get("firstName")}</p>
-<p>Last Name: ${myInfo.get("lastName")}</p>
-<p>Your phone: ${myInfo.get("mobile")}</p>
-<p>Your email is ${myInfo.get("email")}</p>
-<p>business name <strong>${myInfo.get("orgName")}</strong></p>
-<p><strong>Submitted at: <span id="timestamp"></span></strong></p>`;
+    const query = new URLSearchParams(window.location.search);
 
-// Populate the timestamp span with the value from the URL
-document.getElementById("timestamp").textContent = myInfo.get("timestamp")
-    ? new Date(myInfo.get("timestamp")).toLocaleString()
-    : "N/A";
+    resultsBox.innerHTML = `
+        <h2><strong>Thank You for Your Application!</strong></h2>
+        <p>We have received your application with the following details:</p>
+        <p>First Name: ${query.get("firstName")}</p>
+        <p>Last Name: ${query.get("lastName")}</p>
+        <p>Your phone: ${query.get("mobile")}</p>
+        <p>Your email: ${query.get("email")}</p>
+        <p>Business name: ${query.get("orgName")}</p>
+        <p><strong>Submitted at: <span id="submittedTime"></span></strong></p>
+    `;
 
-
-// Buttons
-const npBtn = document.getElementById('npBtn');
-const bronzeBtn = document.getElementById('bronzeBtn');
-const silverBtn = document.getElementById('silverBtn');
-const goldBtn = document.getElementById('goldBtn');
-
-// Dialogs
-const npMember = document.getElementById('npMember');
-const bronzeMember = document.getElementById('bronzeMember');
-const silverMember = document.getElementById('silverMember');
-const goldMember = document.getElementById('goldMember');
-
-// Open dialogs
-npBtn.addEventListener('click', () => npMember.showModal());
-bronzeBtn.addEventListener('click', () => bronzeMember.showModal());
-silverBtn.addEventListener('click', () => silverMember.showModal());
-goldBtn.addEventListener('click', () => goldMember.showModal());
-
-// Close dialogs
-document.querySelectorAll('.close-btn').forEach(btn => {
-    btn.addEventListener('click', () => btn.closest('dialog').close());
+    // Insert timestamp properly
+    const submittedTime = document.getElementById("submittedTime");
+    submittedTime.textContent = new Date().toLocaleString();
 });
 
 
+// DIALOG SETUP FUNCTION 
+function setupDialog(openBtnId, dialogId) {
+    const openBtn = document.getElementById(openBtnId);
+    const dialog = document.getElementById(dialogId);
 
-// document.addEventListener("DOMContentLoaded", () => {
+    if (!openBtn || !dialog) return;
 
-//     const openButton1 = document.querySelector("#openButton1");
-//     const openButton2 = document.querySelector("#openButton2");
-//     const openButton3 = document.querySelector("#openButton3");
-//     const openButton4 = document.querySelector("#openButton4");
+    // OPEN DIALOG BOX
+    openBtn.addEventListener("click", () => {
+        dialog.showModal();
+    });
 
-//     const dialogBox = document.querySelector("#dialogBox");
-//     const closeButton = document.querySelector("#closeButton");
-//     const dialogContent = document.querySelector("#dialogContent");
+    // CLOSE DIALOG BOX
+    dialog.querySelector(".close-btn").addEventListener("click", () => {
+        dialog.close();
+    });
 
-//     // Prevent errors if dialog is missing
-//     if (!dialogBox || !dialogContent || !closeButton) {
-//         console.error("❌ Dialog elements not found in the DOM.");
-//         return;
-//     }
+    // Click outside dialog closes it
+    dialog.addEventListener("click", (event) => {
+        const dialogRect = dialog.getBoundingClientRect();
+        const inside =
+            event.clientX >= dialogRect.left &&
+            event.clientX <= dialogRect.right &&
+            event.clientY >= dialogRect.top &&
+            event.clientY <= dialogRect.bottom;
 
-//     if (openButton1) {
-//         openButton1.addEventListener("click", () => {
-//             dialogBox.showModal();
-//             dialogContent.textContent = "Special events and networking.";
-//         });
-//     }
+        if (!inside) dialog.close();
+    });
+}
 
-//     if (openButton2) {
-//         openButton2.addEventListener("click", () => {
-//             dialogBox.showModal();
-//             dialogContent.textContent = "Includes advertising & event discounts.";
-//         });
-//     }
-
-//     if (openButton3) {
-//         openButton3.addEventListener("click", () => {
-//             dialogBox.showModal();
-//             dialogContent.textContent = "Enhanced advertising, training, and event access.";
-//         });
-//     }
-
-//     if (openButton4) {
-//         openButton4.addEventListener("click", () => {
-//             dialogBox.showModal();
-//             dialogContent.textContent = "All perks, spotlight features, and premium events.";
-//         });
-//     }
-
-//     closeButton.addEventListener("click", () => {
-//         dialogBox.close();
-//     });
-
-//     alert("JOIN.JS IS RUNNING!");
-
-//     console.log("openButton1 =", openButton1);
-//     console.log("dialogBox =", dialogBox);
-//     console.log("closeButton =", closeButton);
-
-// });
-
-
-
-
+// CALL ALL DIALOGS BOXES
+setupDialog("npBtn", "npMember");
+setupDialog("bronzeBtn", "bronzeMember");
+setupDialog("silverBtn", "silverMember");
+setupDialog("goldBtn", "goldMember");

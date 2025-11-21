@@ -66,6 +66,84 @@
             max-width: 500px;
             width: 90%;
         }
+
+        form {
+        margin: 1rem 2%;
+    }
+        
+    label {
+        display: block;
+        font-size: .8rem;
+        color: purple;
+        padding-top: .2rem;
+    }
+
+    form h3 {
+        font-size: .9rem;
+        color: var(--primary-color);
+        margin: 1.5rem 0 .2rem 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    input[type=text],
+    input[type=tel],
+    input[type=date],
+    input[type=email],
+    select, form textarea {
+        display: block;
+        margin: .1rem 0 1rem 0;
+        padding: .3rem;
+        border: 1px solid #999;
+        border-radius: 4px;
+        border-left-width: 5px;
+        border-left-color: #555;
+        font-size: 1rem;
+        color: var(--text-color);
+        width: 250px;
+    }
+
+    input:required {
+        border-left-color: var(--primary-color);
+    }
+
+    input:focus {
+        border-left-color: black;
+        outline: none;
+    }
+
+    input:required:valid {
+        border-left-color: green;
+    }
+
+    input[type=submit] {
+        border: none;
+        text-align: center;
+        background-color: var(--text-color);
+        color: white;
+        border-radius: .5rem;
+        padding: .75rem 1.5rem;
+        margin: 2rem 0;
+        font-size: 1rem;
+        -webkit-appearance: none;
+        appearance: none;
+    }
+
+    input[type=submit]:hover {
+        background-color: var(--primary-color);
+    }
+
+
+    input:-webkit-autofill {
+        -webkit-text-fill-color: var(--text-color);
+    }
+
+    #results {
+        background-color: #F4F1DE;
+        padding: 0 1rem;
+        border: 1px solid var(--primary-color);
+        border-radius: 6px;
+    }
+
     </style>
 </head>
 
@@ -82,49 +160,49 @@
     <main class="container">
 
         <form method="get" action="thankyou.html">
-            <label>First Name:
-                <input type="text" name="firstName" required title="First Name" autocomplete="given-name">
-            </label>
-
-            <label>Last Name:
-                <input type="text" name="lastName" required title="Last Name" autocomplete="family-name">
-            </label>
-
-            <label>Organizational Title:
-                <input type="text" name="orgTitle" title="Organizational Title" autocomplete="organization-title"
-                    pattern="[A-Za-z\s-]{7,}" placeholder="Minimum 7 letters">
-            </label>
-
-            <label>Email:
-                <input type="email" name="email" required title="Email Address" autocomplete="email"
-                    placeholder="example@domain.com">
-            </label>
-
-            <label>Mobile Phone:
-                <input type="tel" name="mobile" required title="Mobile Phone" autocomplete="tel">
-            </label>
-
-            <label>Organization Name:
-                <input type="text" name="orgName" required title="Organization Name" autocomplete="organization">
-            </label>
-
-            <label>Membership Level:
-                <select name="membership" required title="Membership Level">
-                    <option value="">Select...</option>
-                    <option value="np">NP Membership (No Fee)</option>
-                    <option value="bronze">Bronze Membership</option>
-                    <option value="silver">Silver Membership</option>
-                    <option value="gold">Gold Membership</option>
-                </select>
-            </label>
-
-            <label>Organization Description:
-                <textarea name="orgDesc" title="Organization Description"></textarea>
-            </label>
-
-            <input type="hidden" name="timestamp" id="timestamp">
-
-            <input type="submit" value="Submit Application">
+                            <label>First Name:
+                                <input type="text" name="firstName" required title="First Name" autocomplete="given-name">
+                            </label>
+                            
+                            <label>Last Name:
+                                <input type="text" name="lastName" required title="Last Name" autocomplete="family-name">
+                            </label>
+                            
+                            <label>Organizational Title:
+                                <input type="text" name="orgTitle" title="Organizational Title" autocomplete="organization-title"
+                                    pattern="[A-Za-z\s-]{7,}" placeholder="Minimum 7 letters">
+                            </label>
+                            
+                            <label>Email:
+                                <input type="email" name="email" required title="Email Address" autocomplete="email"
+                                    placeholder="example@domain.com">
+                            </label>
+                            
+                            <label>Cell Phone:
+                                <input type="tel" name="mobile" required title="Mobile Phone" autocomplete="tel">
+                            </label>
+                            
+                            <label>Organization Name:
+                                <input type="text" name="orgName" required title="Organization Name" autocomplete="organization">
+                            </label>
+                            
+                            <label>Membership Level:
+                                <select name="membership" required title="Membership Level">
+                                    <option value="">Select...</option>
+                                    <option value="np">NP Membership (No Fee)</option>
+                                    <option value="bronze">Bronze Membership</option>
+                                    <option value="silver">Silver Membership</option>
+                                    <option value="gold">Gold Membership</option>
+                                </select>
+                            </label>
+                            
+                            <label>Organization Description:
+                                <br><textarea name="orgDesc" title="Organization Description"></textarea>
+                            </label>
+                            
+                            <input type="hidden" name="timestamp" id="timestamp">
+                            
+                            <input type="submit" value="Apply for Membership">
         </form>
 
         <div class="cards">
