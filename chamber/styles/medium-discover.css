@@ -1,0 +1,49 @@
+@media (min-width: 501px) {
+    main {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        margin-left: 18px;
+    }
+
+    #allplaces div {
+            margin: 1rem 18px;
+            border: 1px solid #999;
+            background-color: #eee;
+            border-radius: 8px;
+            overflow: hidden;
+    
+            display: grid;
+            grid-template-areas:
+                "photo name"
+                "photo description"
+                "photo location";
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+        
+        #allplaces div h2 {
+            margin: 1rem 10px;
+            grid-area: name;
+        }
+        
+        #allplaces div p {
+            margin: 1rem 10px;
+            grid-area: description;
+        }
+        
+        #allplaces div address {
+            margin: 1rem 10px;
+            grid-area: location;
+        }
+        
+        #allplaces div img {
+            width: 100%;
+            width: 300px;
+            grid-area: photo;
+        }
+}
