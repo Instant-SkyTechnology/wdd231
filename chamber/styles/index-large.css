@@ -170,7 +170,6 @@
         object-fit: cover; */
         width: 120px;
         max-width: 100%;
-            /* ✅ Ensures image scales down within its container */
         height: auto;
         object-fit: cover;
         border: 1px solid #000;

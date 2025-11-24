@@ -3,6 +3,17 @@
     box-sizing: border-box;
 }
 
+h2 {
+    font-size: 1em;
+    font-weight: 300;
+    font-weight: bold;
+}
+
+address {
+    font-size: .9em;
+    font-weight: 300;
+}
+
 #allplaces div {
     margin: 1rem 8px;
     border: 1px solid #999;

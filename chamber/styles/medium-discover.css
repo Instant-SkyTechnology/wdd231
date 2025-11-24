@@ -8,18 +8,35 @@
         margin-left: 18px;
     }
 
+    h2 {
+        font-size: 1em;
+        font-weight: 300;
+        font-weight: bold;
+    }
+
+    address {
+        font-size: .9em;
+        font-weight: 300;
+    }
+
     #allplaces div {
             margin: 1rem 18px;
             border: 1px solid #999;
             background-color: #eee;
             border-radius: 8px;
             overflow: hidden;
+            /* height: 100%;
+            height: 200px; */
+            height: auto;
     
             display: grid;
             grid-template-areas:
                 "photo name"
                 "photo description"
                 "photo location";
+
+            grid-template-columns: 300px 1fr;
+            grid-template-rows: auto auto auto;
         }
 
         * {

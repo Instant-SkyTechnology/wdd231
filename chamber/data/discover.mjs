@@ -5,7 +5,7 @@ export const places = [
         "address": "301 Front St W, Toronto, ON M5V 2T6",
         "cost": "General Admission ~ CA$45–47; SkyPod ~ CA$79; EdgeWalk ~ CA$199+",
         "description": "Toronto’s iconic tower featuring panoramic observation decks, a glass floor, and the thrilling outdoor EdgeWalk experience.",
-        "photo_url": "tower.webp"
+        "photo_url": "CN_tower.webp"
     },
     {
         "name": "Ripley’s Aquarium of Canada",
