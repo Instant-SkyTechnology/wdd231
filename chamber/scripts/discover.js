@@ -31,17 +31,41 @@ function displayItem(places) {
         Card.appendChild(description)
 
 
-        // photo.addEventListener("click", () => showStuff(place));
-
         showHere.appendChild(Card);
     });
 }
-
-// function showStuff(place) {
-//     mytitle.textContent = place.name;
-//     myinfo.textContent = `Dedicated ${place.dedicated} by ${place.person} as temple number ${place.number}.`;
-
-//     mydialog.showModal();
-// }
-
 displayItem(places);
+
+
+// LAST VISIT MESSAGE
+const messageBox = document.querySelector("#visit-message");
+
+// Retrieve the last visit date
+const lastVisit = localStorage.getItem("lastVisit");
+const now = Date.now();
+let message = "";
+
+if (!lastVisit) {
+    // First visit
+    message = "Welcome! Let us know if you have any questions.";
+} else {
+    const lastVisitTime = parseInt(lastVisit);
+    const difference = now - lastVisitTime;
+
+    const msInDay = 1000 * 60 * 60 * 24;
+    const days = Math.floor(difference / msInDay);
+
+    if (days < 1) {
+        message = "Back so soon! Awesome!";
+    } else if (days === 1) {
+        message = "You last visited 1 day ago.";
+    } else {
+        message = `You last visited ${days} days ago.`;
+    }
+}
+
+// Display message in the box
+messageBox.textContent = message;
+
+// Store the current visit time
+localStorage.setItem("lastVisit", now);

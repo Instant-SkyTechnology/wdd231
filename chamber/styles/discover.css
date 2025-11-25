@@ -49,5 +49,15 @@ address {
     grid-area: photo;
 }
 
+/* Visit message styling (optional) */
+#visit-message {
+    margin: 1rem 10px;
+    padding: 1rem;
+    background: #eef6ff;
+    border-left: 4px solid #4a90e2;
+    font-size: 1.1rem;
+    border-radius: 4px;
+}
+
 }
 
