@@ -1,0 +1,170 @@
+/* ==========================================================
+   MOBILE VIEW CSS  (Phones & Small Tablets)
+   ========================================================== */
+@media (max-width: 600px) {
+
+    /* ------------------------
+       GLOBAL STYLES
+       ------------------------ */
+    /* ------------------------
+           NAVIGATION
+           ------------------------ */
+        nav {
+            flex-direction: column;
+            align-items: center;
+            padding: 15px 20px;
+            position: relative;
+        }
+    
+        /* Hamburger button */
+        .hamburger {
+            display: block;
+            font-size: 30px;
+            cursor: pointer;
+            color: white;
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            z-index: 10;
+        }
+    
+        /* Menu hidden by default */
+        nav ul {
+            flex-direction: column;
+            width: 100%;
+            background-color: var(--primary);
+            text-align: center;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease, opacity 0.35s ease;
+            margin-top: 10px;
+            border-radius: 5px;
+            gap: 12px;
+        }
+    
+        /* Show menu when active */
+        nav ul.active {
+            max-height: 300px;
+            opacity: 1;
+            padding-bottom: 10px;
+        }
+    
+        nav ul li {
+            margin: 10px 0;
+        }
+    
+        nav ul li a {
+            font-size: 18px;
+            font-weight: 600;
+            color: white;
+        }
+    
+        nav ul li a:hover {
+            color: var(--secondary);
+        }
+    
+        nav .logo {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+    
+        /* ------------------------
+           PAGE STRUCTURE
+           ------------------------ */
+        .container {
+            padding: 20px;
+        }
+    
+        h1,
+        h2 {
+            text-align: center;
+            font-size: 22px;
+        }
+    
+        p {
+            font-size: 15px;
+            line-height: 1.6;
+        }
+    
+        ul.destinations-list li {
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+    
+        .gallery img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+    
+        /* ------------------------
+           FOOTER
+           ------------------------ */
+        footer {
+            padding: 35px 20px;
+            text-align: center;
+        }
+    
+        footer .footer-container {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            max-width: 100%;
+        }
+    
+        footer h3 {
+            font-size: 18px;
+        }
+    
+        footer p,
+        footer li,
+        footer a {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+    
+        .social-icons a {
+            font-size: 26px;
+            margin-right: 10px;
+        }
+    
+        .footer-bottom {
+            font-size: 12px;
+            padding-top: 12px;
+            margin-top: 20px;
+        }
+    }
+    
+    /* ============================
+       VERY SMALL DEVICES (<480px)
+       ============================ */
+    @media (max-width: 480px) {
+        nav .logo {
+            font-size: 20px;
+        }
+    
+        nav ul li a {
+            font-size: 16px;
+        }
+    
+        footer h3 {
+            font-size: 16px;
+        }
+    
+        .social-icons a {
+            font-size: 24px;
+            margin-right: 8px;
+        }
+    
+        h1,
+        h2 {
+            font-size: 20px;
+        }
+    
+        p,
+        ul.destinations-list li {
+            font-size: 14px;
+        }
+    }
