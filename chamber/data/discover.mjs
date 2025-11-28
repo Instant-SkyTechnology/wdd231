@@ -40,7 +40,7 @@ export const places = [
         "address": "Kensington Ave & surrounding streets, Toronto, ON M5T 2K2",
         "cost": "Free to explore; food and shopping priced individually",
         "description": "A lively and eclectic multicultural neighborhood known for vintage shops, street art, global cuisine, and indie boutiques.",
-        "photo_url": "kensington_market.webp"
+        "photo_url": "Kensington_Market.webp"
     },
     {
         "name": "Graffiti Alley",
