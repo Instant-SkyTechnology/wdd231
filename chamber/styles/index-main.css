@@ -155,8 +155,8 @@ html {
         .hero article {
             position: absolute;
             width: 85%; /* scales the box but keeps position */
-            bottom: 20px;
-            right: 20px;
+            bottom: 10px;
+            right: 10px;
             background: radial-gradient(#eeeeeeb7, #afb6b99e);
             border: 1px solid #000;
             padding: 0.5em;
