@@ -1,43 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-Us">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TravelSnap - Home</title>
+    <meta name="description" content="Business Home page TravelSnap">
+    <meta name="author" content="Steve B KALALA">
 
-    <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@300;400&display=swap"
+    <meta property="og:title" content="TravelSnap - Explore the World">
+    <meta property="og:description"
+        content="Discover amazing travel destinations and plan your next adventure with TravelSnap.">
+    <meta property="og:image" content="https://instant-skytechnology.github.io/wdd231/project/images/travel-logo.webp">
+    <meta property="og:url" content="https://instant-skytechnology.github.io/wdd231/project/contact.html">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <title>Home - TravelSnap</title>
+    <link rel="icon" href="images/travel-logo.webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/index_small.css">
     <link rel="stylesheet" href="styles/index_large.css">
 </head>
 
 <body>
-
-    <!-- Navigation Bar -->
-    <nav>
-        <div class="logo">TravelSnap</div>
+    <header>
+        <div class="logo">
+            <div class="fufu">
+                <img src="images/travel-logo.webp" alt="site logo" width="70" height="70">
+            </div>
     
-        <!-- Hamburger button -->
-        <div class="hamburger" id="hamburger">
-            ☰
+            <div class="fufu">
+                <span>TravelSnap</span>
+            </div>
+    
+            <div class="fufu">
+                <button id="nav-button" class="hamburger" aria-label="navigation"></button>
+            </div>
+    
+            <nav id="nav-bar" class="navigation">
+                <ul>
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="destination.html">Destinations</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-    
-        <ul id="nav-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="destinations.html">Destinations</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+    </header>
 
-    <!-- Main Content -->
-    <div class="container">
-
-        <!-- Overview Section -->
+    <main class="container">
         <div class="section">
-            <h1>Welcome to TravelSnap</h1>
+            <h1>Home</h1>
+            <h2>Welcome to TravelSnap</h2>
             <p>
                 TravelSnap is a simple and visual travel blog designed to share quick travel stories,
                 inspiring photos, and easy-to-read travel tips. This site allows visitors to explore
@@ -45,7 +63,6 @@
             </p>
         </div>
 
-        <!-- Featured Destinations Section -->
         <div class="section">
             <h2>Featured Destinations</h2>
             <p>Check out some of our most popular and visually stunning travel spots:</p>
@@ -57,17 +74,27 @@
             </ul>
         </div>
 
-        <!-- Image Gallery Section -->
         <div class="section">
             <h2>Image Gallery</h2>
+            <div id="visit-message" class="visit-message"></div>
             <div class="gallery">
-                <img src="https://via.placeholder.com/200x140" alt="Gallery Image 1">
-                <img src="https://via.placeholder.com/200x140" alt="Gallery Image 2">
-                <img src="https://via.placeholder.com/200x140" alt="Gallery Image 3">
+                <img id="img1" src="images/Distillery_Historic_District.webp" alt="Gallery Image 1" loading="lazy">
+                <img id="img2" src="images/Kensington_Market.webp" alt="Gallery Image 2" loading="lazy">
+                <img id="img3" src="images/hero1.webp" alt="Gallery Image 3" loading="lazy">
+                <img id="img4" src="images/Distillery_Historic_District.webp" alt="Gallery Image 1" loading="lazy">
+                <img id="img5" src="images/Kensington_Market.webp" alt="Gallery Image 2" loading="lazy">
+                <img id="img6" src="images/hero1.webp" alt="Gallery Image 3" loading="lazy">
+                <img id="img7" src="images/Kensington_Market.webp" alt="Gallery Image 2" loading="lazy">
+                <img id="img8" src="images/hero1.webp" alt="Gallery Image 3" loading="lazy">
             </div>
         </div>
 
-        <!-- Purpose Section -->
+        <!-- Dialog element -->
+        <dialog id="image-dialog">
+            <p id="dialog-message">This is a short message!</p>
+            <button id="close-dialog">Close</button>
+        </dialog>
+
         <div class="section">
             <h2>Why TravelSnap?</h2>
             <p>
@@ -83,13 +110,9 @@
             </ul>
         </div>
 
-    </div>
-
-    <!-- Footer -->
+    </main>
     <footer>
         <div class="footer-container">
-
-            <!-- About -->
             <div>
                 <h3>About TravelSnap</h3>
                 <p>
@@ -97,37 +120,39 @@
                     and visual photography to inspire your next trip. Built for learning and exploration.
                 </p>
             </div>
-
-            <!-- Quick Links -->
             <div>
                 <h3>Quick Links</h3>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="destinations.html">Destinations</a></li>
+                    <li><a href="destination.html">Destinations</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
-
-            <!-- Social & Contact -->
-            <div>
+            <div class="footer-center">
                 <h3>Connect With Us</h3>
                 <p>Email: travelsnap@example.com</p>
-
-                <div class="social-icons">
-                    <a href="#" title="Facebook">📘</a>
-                    <a href="#" title="X / Twitter">🐦</a>
-                    <a href="#" title="Instagram">📸</a>
-                    <a href="#" title="GitHub">💻</a>
-                </div>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.svg" alt="facebook" width="16"
+                                height="16"></a>
+                        <a href="https://www.twitter.com/" target="_blank"><img src="images/twitter-x.svg" alt="twiter" width="16"
+                                height="16"></a>
+                        <a href="https://www.linkedin.com/" target="_blank"><img src="images/linkedin.svg" alt="linkedin" width="16"
+                                height="16"></a>
+                        <a href="https://github.com/Instant-SkyTechnology/wdd131/index.html" target="_blank"><img
+                                src="images/github.svg" alt="github" width="16" height="16"></a>
+                        <a href="https://www.microsoft.com/en-ca/microsoft-teams/log-in?msockid=37503da8c2d962d133de2ba5c3f663f1"
+                            target="_blank"><img src="images/microsoft-teams.svg" alt="microsoft-teams" width="16" height="16"></a>
+                    </div>
             </div>
 
         </div>
 
         <div class="footer-bottom">
-            &copy; 2025 TravelSnap. All Rights Reserved.
+            <p>&copy; <span id="year"></span> TravelSnap. All Rights Reserved ◈ Steve KALALA</p>
+            <p>Last Modified: <span id="lastModified"></span></p>
         </div>
     </footer>
-    <script src="scripts/index.js" defer></script>
+    <script src="scripts/index.js"></script>
 </body>
 
 </html>

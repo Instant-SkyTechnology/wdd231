@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en-Us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Business Home page TravelSnap">
+    <meta name="author" content="Steve B KALALA">
+
+    <meta property="og:title" content="TravelSnap - Explore the World">
+    <meta property="og:description"
+        content="Discover amazing travel destinations and plan your next adventure with TravelSnap.">
+    <meta property="og:image" content="https://instant-skytechnology.github.io/wdd231/project/images/travel-logo.webp">
+    <meta property="og:url" content="https://instant-skytechnology.github.io/wdd231/project/contact.html">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <title>Home - TravelSnap</title>
+    <link rel="icon" href="images/travel-logo.webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/index_small.css">
+    <link rel="stylesheet" href="styles/index_large.css">
+
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    
+        /* Body pushes footer down */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+    
+        /* Main area aligns well on all screen sizes */
+        main {
+            flex: 1;
+            padding: 1.5rem;
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+    
+        @media (min-width: 701px) {
+            main {
+                padding: 2rem 3rem;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <div class="fufu">
+                <img src="images/travel-logo.webp" alt="site logo" width="70" height="70">
+            </div>
+
+            <div class="fufu">
+                <span>TravelSnap</span>
+            </div>
+
+            <div class="fufu">
+                <button id="nav-button" class="hamburger" aria-label="navigation"></button>
+            </div>
+
+            <nav id="nav-bar" class="navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="destination.html">Destinations</a></li>
+                    <li class="active"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <div id="results"></div>
+
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div>
+                <h3>About TravelSnap</h3>
+                <p>
+                    TravelSnap is a simple travel blog that shares destination highlights, travel tips,
+                    and visual photography to inspire your next trip. Built for learning and exploration.
+                </p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="destination.html">Destinations</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-center">
+                <h3>Connect With Us</h3>
+                <p>Email: travelsnap@example.com</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.svg" alt="facebook"
+                            width="16" height="16"></a>
+                    <a href="https://www.twitter.com/" target="_blank"><img src="images/twitter-x.svg" alt="twiter"
+                            width="16" height="16"></a>
+                    <a href="https://www.linkedin.com/" target="_blank"><img src="images/linkedin.svg" alt="linkedin"
+                            width="16" height="16"></a>
+                    <a href="https://github.com/Instant-SkyTechnology/wdd131/index.html" target="_blank"><img
+                            src="images/github.svg" alt="github" width="16" height="16"></a>
+                    <a href="https://www.microsoft.com/en-ca/microsoft-teams/log-in?msockid=37503da8c2d962d133de2ba5c3f663f1"
+                        target="_blank"><img src="images/microsoft-teams.svg" alt="microsoft-teams" width="16"
+                            height="16"></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> TravelSnap. All Rights Reserved ◈ Steve KALALA</p>
+            <p>Last Modified: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+    <script src="scripts/index.js"></script>
+    <script type="module" src="scripts/contact.js"></script>
+</body>
+
+</html>
