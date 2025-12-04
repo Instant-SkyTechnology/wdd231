@@ -2,47 +2,47 @@
 const travelData = [
     {
         "name": "Paris, France",
-        "image": "images/paris.jpg",
+        "image": "images/paris2.webp",
         "description": "The city of lights, famous for art, culture, and food."
     },
     {
         "name": "Tokyo, Japan",
-        "image": "images/tokyo.jpg",
+        "image": "images/tokyo2.webp",
         "description": "A bustling metropolis blending tradition and modern innovation."
     },
     {
         "name": "Cape Town, South Africa",
-        "image": "images/capetown.jpg",
+        "image": "images/cape_town2.webp",
         "description": "Beautiful landscapes with mountains, oceans, and wildlife."
     },
     {
         "name": "Bali, Indonesia",
-        "image": "images/bali.jpg",
+        "image": "images/indonesia2.webp",
         "description": "A tropical paradise known for beaches, temples, waterfalls, and vibrant culture."
     },
     {
         "name": "New York City, USA",
-        "image": "images/nyc.jpg",
+        "image": "images/new_york1.webp",
         "description": "The city that never sleeps, famous for skyscrapers, Broadway, and diverse food."
     },
     {
         "name": "Barcelona, Spain",
-        "image": "images/barcelona.jpg",
+        "image": "images/span2.webp",
         "description": "A Mediterranean city filled with art, architecture, beaches, and colorful street life."
     },
     {
         "name": "Sydney, Australia",
-        "image": "images/sydney.jpg",
+        "image": "images/sydney.webp",
         "description": "Home to iconic landmarks like the Sydney Opera House and beautiful coastal scenery."
     },
     {
         "name": "Rio de Janeiro, Brazil",
-        "image": "images/rio.jpg",
+        "image": "images/brasil.webp",
         "description": "A lively city known for its beaches, Carnival festival, and Christ the Redeemer statue."
     },
     {
         "name": "Reykjavik, Iceland",
-        "image": "images/reykjavik.jpg",
+        "image": "images/brasil1.webp",
         "description": "A gateway to breathtaking natural wonders like geysers, glaciers, and the Northern Lights."
     }
 
