@@ -53,11 +53,8 @@
         top: 100%;
         left: 0;
         width: 100vw;
-        margin: 0;
         padding: 0;
         z-index: 1000;
-        background-color: var(--primary);
-        flex-direction: column;
         box-sizing: border-box;
     }
 
@@ -73,8 +70,6 @@
         display: flex;
         flex-direction: column;
         list-style-type: none;
-        padding: 0;
-        margin: 0;
         width: 100%;
         background-color: #999;
         gap: 0 !important;
@@ -96,10 +91,6 @@
 
     .navigation ul li a {
         display: block;
-        color: white;
-        text-decoration: none;
-        font-family: 'Courier New', Courier, monospace;
-        font-weight: 100;
         padding: 12px 15px;
     }
 
@@ -127,37 +118,29 @@
         margin-bottom: 10px;
     }
 
-    /* .gallery img {
-        display: block;
-        width: 100%;
-        height: auto;
-        margin-bottom: 10px;
-        border-radius: 5px;
-        text-align: center;
-    } */
-           .gallery {
-               display: grid !important;
-               grid-template-columns: 1fr;
-               gap: 10px;
-           }
-    
-           .gallery img {
-               width: 100% !important; /* override 200px */
-               height: 250px !important; /* override 140px */
-               object-fit: cover;
-               margin: 0 !important; /* override margin-right */
-               border-radius: 10px !important;
-               border: none !important;
-               display: block;
-               transition: none !important;
-           }
+    .gallery {
+        display: grid !important;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
 
-            .gallery img:hover {
-                transform: none !important;
-                filter: none !important;
-                cursor: default;
-            }
-    
+    .gallery img {
+        width: 100% !important; /* override 200px */
+        height: 250px !important; /* override 140px */
+        object-fit: cover;
+        margin: 0 !important; /* override margin-right */
+        border-radius: 10px !important;
+        border: none !important;
+        display: block;
+        transition: none !important;
+    }
+
+    .gallery img:hover {
+        transform: none !important;
+        filter: none !important;
+        cursor: default;
+    }
+
     /*************FOOTER**********/
     footer {
         padding: 10px 5px 5px !important;
@@ -191,12 +174,19 @@
         list-style: none;
     }
 
+   
+    /* CENTER SOCIAL MEDIA LINKS */
     .social-links {
-        justify-content: center;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center;
+        column-gap: 12px !important;
     }
 
     .social-links a {
-        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
 }
