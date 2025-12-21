@@ -12,9 +12,7 @@
     /***************HEADER*********************/
     header {
         padding: 15px 0;
-        border-bottom: 5px solid #bbb;
         position: relative;
-        background-color: var(--primary);
         width: 100%;
     }
     
@@ -54,8 +52,6 @@
         left: 0;
         width: 100vw;
         padding: 0;
-        z-index: 1000;
-        box-sizing: border-box;
     }
 
     .navigation.show {
