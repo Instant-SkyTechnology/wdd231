@@ -15,6 +15,7 @@ function displayItem(places) {
         const photo = document.createElement("img")
         photo.src = `images/${place.photo_url}`
         photo.alt = place.name;
+        photo.loading = 'lazy';
         // TITLE ELEMENT
         const titles = document.createElement("h2")
         titles.innerText = place.name
